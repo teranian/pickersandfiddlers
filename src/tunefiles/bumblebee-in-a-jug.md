@@ -27,7 +27,6 @@ abc: "X:0\r
   |:\"C\"efed efed|eged cBAG|\"Am\"ABAG ABAG|\"G\"EGAB cBcd |!\r
 
   \"C\"e4 e3d |eged cBAG|\"Am\"A2Ac \"C\"ecdc|\"G\"BGAB \"C\"c4:|]"
-tuneKey: C
 key: C
 tags:
   - Tags

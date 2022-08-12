@@ -1,16 +1,16 @@
 ---
-layout: blog
+layout: tunes
 ---
 
 <section class="mt-15">
-    {% set postslist = collections.post %}
+    {% set tunelist = collections.tunes %}
 
-    {% for post in postslist | reverse %}
+    {% for tune in tunelist | reverse %}
         <article class="my-8">
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
-                <a href="{{ post.url | url }}">
-                    {% if post.data.title %}
-                        {{ post.data.title }}
+                <a href="{{ tune.url | url }}">
+                    {% if tune.data.title %}
+                        {{ tune.data.title }}
                     {% else %}
                         Untitled
                     {% endif %}
@@ -18,20 +18,20 @@ layout: blog
             </h2>
             <p class="text-base leading-6 text-gray-500 mb-3">
                 <time>
-                    {{ post.date | readableDate }}
+                    {{ tune.date | readableDate }}
                     by
-                    <a>{{ post.data.author }}</a>
+                    <a>{{ tune.data.author }}</a>
 
                 </time>
             </p>
-            {% if post.data.description %}
+            {% if tune.data.description %}
                 <p class="text-lg text-gray-500 mb-3">
-                    {{ post.data.description }}
+                    {{ tune.data.description }}
                 </p>
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                <a href="{{ tune.url | url }}" class="text-indigo-500 font-bold text-lg">
                     Read more →
                 </a>
             </p>

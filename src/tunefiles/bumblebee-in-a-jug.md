@@ -29,6 +29,6 @@ abc: "X:0\r
   \"C\"e4 e3d |eged cBAG|\"Am\"A2Ac \"C\"ecdc|\"G\"BGAB \"C\"c4:|]"
 key: C
 tags:
-  - Tags
+  - Tunes in C
 ---
 https://www.youtube.com/watch?v=nEcYXqlSte8

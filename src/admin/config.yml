@@ -4,7 +4,7 @@ backend:
   branch: neat-starter
   ### enable below lines for github integration ###
   # name: github
-  # repo: surjithctly/neat-starter
+  # repo: teranian/pickersandfiddlers
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
@@ -14,7 +14,7 @@ local_backend: true
 collections:
   - label: "Tunes"
     name: "tunes"
-    folder: "src/tunes"
+    folder: "src/tunefiles"
     create: true
     editor:
       preview: false

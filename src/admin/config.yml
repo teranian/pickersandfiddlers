@@ -20,24 +20,18 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
+      # - { label: "Description", name: "description", widget: "string" }
+      # - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "ABC code", name: "abc", widget: "markdown" }
-      - { label: "Tune Key", name: "tuneKey", widget: "string" }
       - widget: select
         label: "key"
         name: "key"
         multiple: false
         create: true
         options: ["A", "AEAE", "Am", "C", "D", "DDAD", "Em", "G"]
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
+
   - label: "Sets"
     name: "sets"
     folder: "src/sets"

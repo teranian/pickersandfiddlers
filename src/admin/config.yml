@@ -25,11 +25,11 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "ABC code", name: "abc", widget: "markdown" }
-      - { label: "Key", name: "key", widget: "string" }
+      - { label: "Tune Key", name: "tuneKey", widget: "string" }
       - widget: select
         label: "key"
         name: "key"
-        multiple: true
+        multiple: false
         create: true
         options: ["A", "AEAE", "Am", "C", "D", "DDAD", "Em", "G"]
       - widget: select

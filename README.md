@@ -49,4 +49,4 @@ npm run start
 
 ## Author
 
-Ewan Lawrie aka Teranian 
+Ewan Lawrie

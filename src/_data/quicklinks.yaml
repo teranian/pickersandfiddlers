@@ -1,8 +1,7 @@
----
 links:
   - title: Tunes (Alphabetical)
-    url: "/tunes-alphabetical"
+    url: /tunes/alphabetical
     desc: View a list of Old Time tunes
   - title: Tunes (By Key)
-    url: "/tunes-key"
+    url: /tunes/bykey
     desc: View the full list of tunes grouped by Key

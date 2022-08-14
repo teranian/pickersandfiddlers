@@ -16,6 +16,8 @@ key: AEAE
 tags:
   - Tunes in AEAE
 ---
+Copied from <https://abcnotation.com/tunePage?a=thesession.org/tunes/14037.no-ext/0001>
+
 X: 1
 T: Abe's Retreat
 R: reel

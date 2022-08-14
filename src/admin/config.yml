@@ -1,7 +1,7 @@
 backend:
   # Use netlify identity as backend
   name: git-gateway
-  branch: neat-starter
+  branch: master
   ### enable below lines for github integration ###
   # name: github
   # repo: teranian/pickersandfiddlers
@@ -14,7 +14,7 @@ local_backend: true
 collections:
   - label: "Tunes"
     name: "tunes"
-    folder: "src/tunefiles"
+    folder: "src/tunes"
     create: true
     editor:
       preview: false
@@ -31,26 +31,7 @@ collections:
         multiple: false
         create: true
         options: ["A", "AEAE", "Am", "C", "D", "DDAD", "Em", "G"]
-
-  - label: "Sets"
-    name: "sets"
-    folder: "src/sets"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Set Tunes", name: "setTunes", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        
   - label: "Settings"
     name: "settings"
     editor:

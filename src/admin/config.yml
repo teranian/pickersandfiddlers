@@ -24,7 +24,7 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "ABC code", name: "abc", widget: "markdown" }
+      - { label: "ABC code", name: "abc", widget: "string" }
       - widget: select
         label: "key"
         name: "key"

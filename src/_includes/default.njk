@@ -15,17 +15,29 @@
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
+
+
+    {% if tune.data.abc %} 
+    <script type="text/javascript">
+		var abc = "{{ tunes.data.abc }}";
+
+		function load() {
+			ABCJS.renderAbc("abcrender", abc);
+		}
+    </script>
+    {% endif %}
+    
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    {% include "./partials/navbar.njk" %}
 
     {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+    {% include "./partials/footer.njk" %}
 
     <script src="/static/js/alpine.js"></script>
-    <script src="/static/js/abcjs-basic.js"></script>
-    <script src="/static/js/abcjs-plugin.js"></script>
+    <script src="/static/js/abcjs-basic-min.js"></script>
+    {# <script src="/static/js/abcjs-plugin-min.js"></script> #}
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

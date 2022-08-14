@@ -15,12 +15,23 @@ prism: true
         </p>
 
     </div>
+    
+    <article class="prose lg:prose-xl my-4 mx-auto">
+        Content
+        {{ content | safe }}
+    </article>
+
     {% if tune.data.abc %}
         <p class="text-lg text-gray-500 mb-3">
-            {{ tunes.data.abc | safe }}
+            Tune Data
+            {{ tune.data.abc }}
         </p>
     {% endif %}
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}</article>
+
+    {% if tune.data.abc %}
+        <div class="abcrender"></div>
+        
+    {% endif %}
+
 
 </div>

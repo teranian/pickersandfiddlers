@@ -1,6 +1,5 @@
----
 items:
   - text: Tunes (Alphabetical)
-    url: "/tunes-alphabetical"
+    url: /tunes/alphabetical
   - text: Tunes (Key)
-    url: "/tunes-key"
+    url: /tunes/bykey

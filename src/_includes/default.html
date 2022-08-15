@@ -3,7 +3,7 @@
   <head>
     {% include "./partials/head.html" %}
   </head>
-  <body onload="load()">
+  <body>
     {% include "./partials/navbar.html" %}
 
     {{ content | safe }}
@@ -11,8 +11,6 @@
     {% include "./partials/footer.html" %}
 
     <script src="/static/js/alpine.js"></script>
-    <script src="/static/js/abcjs-basic-min.js"></script>
-    {# <script src="/static/js/abcjs-plugin-min.js"></script> #}
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

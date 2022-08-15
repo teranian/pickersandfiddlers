@@ -13,9 +13,14 @@
   <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
 {% endif %}
 
+<script src="/static/js/abcjs-basic.js"></script>
+{# <script src="/static/js/abcjs-plugin-min.js"></script> #}
+
 <script type="text/javascript">
   var abc = "{{ abc }}";
+
   function load() {
-      ABCJS.renderAbc("paper", abc);
-  }
+      ABCJS.renderAbc(abcdiv, abc);
+  };
+  document.onload = load;
 </script>

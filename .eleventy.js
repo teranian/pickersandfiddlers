@@ -29,7 +29,8 @@ module.exports = function (eleventyConfig) {
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
     "./node_modules/prismjs/themes/prism-tomorrow.css": "./static/css/prism-tomorrow.css",
-    "./node_modules/abcjs/dist/abcjs-basic-min.js": "./static/js/abcjs-basic-min.js",
+    "./node_modules/abcjs/dist/abcjs-basic.js": "./static/js/abcjs-basic.js",
+    "./node_modules/abcjs/dist/abcjs-basic.js.map": "./static/js/abcjs-basic.js.map",
     "./node_modules/abcjs/dist/abcjs-plugin-min.js": "./static/js/abcjs-plugin-min.js",
   });
 

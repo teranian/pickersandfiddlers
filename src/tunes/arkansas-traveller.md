@@ -20,4 +20,3 @@ tags:
   - Tunes in D
 ---
 https://abcnotation.com/tunePage?a=banjolin.co.uk/tunes/abcs/arkansastraveller/0000
-

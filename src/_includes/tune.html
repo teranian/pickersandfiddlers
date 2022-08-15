@@ -2,18 +2,8 @@
 layout: default
 prism: true
 ---
-{# {% block head %}
-    <script type="text/javascript">
-    var abc = "{{ abc }}";
 
-    function load() {
-        ABCJS.renderAbc("abcdiv", abc);
-    }
-    </script>
-
-{% endblock %} #}
-
-<div class="container max-w-4xl mt-6  px-6">
+<div class="container max-w-6xl mt-6  px-6">
     <div class="pb-5 mb-5 border-b border-gray-100">
         <h1 class="font-bold text-5xl">{{title}}</h1>
         <p class="text-center text-base leading-6 font-medium text-gray-500">
@@ -30,15 +20,18 @@ prism: true
         Content
         {{ content | safe }}
 
-        {% if abc %}
+    {% if abc %}
         <p class="text-lg text-gray-500 mb-3">
             Tune Data:
-            {{ abc }}
         </p>
+        <textarea name="ABC Music" id="abcText" cols="80" rows="12" spellcheck="false">{{ abc }}</textarea>
     {% endif %}
+
+    <div id="warnings"></div>
+    <hr>
+    <div id="paper"></div>
+
     </article>
 
-    <div id="abcdiv"></div>
-    
-    
+   
 </div>

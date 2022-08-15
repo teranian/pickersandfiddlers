@@ -26,7 +26,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "ABC code", name: "abc", widget: "text", required: false }
       - { label: "ABC code", name: "abc-markdown", widget: "markdown", required: false }
-      - { label: "ABC code", name: "abc-string", widget: "markdown", required: false }
+      - { label: "ABC code", name: "abc-string", widget: "string", required: false }
       - widget: select
         label: "key"
         name: "key"

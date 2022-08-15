@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}}</title>
+
+{% if description %}
+  <meta name="description" content="{{description}}"/>
+{% endif %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+
+{% if prism == true %}
+  <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+{% endif %}
+
+<script type="text/javascript">
+  var abc = "{{ abc }}";
+  function load() {
+      ABCJS.renderAbc("paper", abc);
+  }
+</script>

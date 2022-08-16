@@ -1,5 +1,5 @@
 ---
-layout: tunes-alphabetical
+layout: alphabetical
 permalink: /tunes/alphabetical/
 ---
 
@@ -19,23 +19,12 @@ permalink: /tunes/alphabetical/
                 </a>
                 <span>({{ tunes.data.key }})</span>
             </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
-                <time>
-                    {{ tunes.date | readableDate }}
-
-                </time>
-            </p>
+            
             {% if tunes.data.description %}
                 <p class="text-lg text-gray-500 mb-3">
                     {{ tunes.data.description }}
                 </p>
             {% endif %}
-
-            <p>
-                <a href="{{ tunes.url | url }}" class="text-indigo-500 font-bold text-lg">
-                    Read more →
-                </a>
-            </p>
 
         </article>
     {% endfor %}

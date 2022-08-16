@@ -25,7 +25,7 @@ collections:
       - { label: "Composer", name: "composer", widget: "string", required: false }
       - { label: "Source", name: "source", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: false  }
       - { label: "ABC code", name: "abc", widget: "text" }
       - widget: select
         label: "key"

@@ -30,3 +30,32 @@ K:C
 "C"C2CE G3c|"F"AFAc "G"BGAB|"C"c2cd ecdc|1"G"BGAB "C"c2ED:|2"G"BGAB "C"c3d|]!
 |:"C"efed efed|eged cBAG|"Am"ABAG ABAG|"G"EGAB cBcd |!
 "C"e4 e3d |eged cBAG|"Am"A2Ac "C"ecdc|"G"BGAB "C"c4:|]
+
+
+% Generated more or less automatically by swtoabc by Erich Rickheit KSC
+X:1
+T:All The Good Times
+M:3/4
+L:1/4
+K:Dbmaj
+F3/2 E/2 F| D2 E| D- C B,| A,3| F3/2 E/2 F| D2 B,| C- E2-| E2 z| F3/2 E/2 F|\
+D2 D| D- C B,| A,2 A,/2A,/2| A, D D/2D/2| C- D E| D3-| D2 z|X:1
+T:All The Good Times
+M:3/4
+L:1/4
+K:G
+ B3/2 A/2 B| G2 A| G- F E| D3| B3/2 A/2 B| G2 E| F- A2-| A2 z| B3/2 A/2 B|\
+ G2 G| G- F E| D2 D/2D/2| D G G/2G/2| F- G A| G3-| G2 z|
+
+X:302
+T:Arkansas Traveler
+F:http://www.banjolin.co.uk/tunes/abcs/arkansastraveller.abc
+O:America
+M:4/4
+L:1/8
+R:Reel
+K:D
+A2 |: dfed B2B2 | A2A2 d2d2 | e2e2 f2f2 | efed B2A2 |
+   |dfed B2B2 | A2A2 d4 | dcdA BdAG |1 F2E2D2A2:|2 F2E2D2 fg||
+   |: agfa gfeg | fedf e2A2 | dcde fefg | afdf e2fg |
+   |agfa gfeg | fedf e2A2 | dcdA BdAG |1 F2E2D2 fg:|2 F2E2D2 A2 ||

@@ -22,6 +22,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Composer", name: "composer", widget: "string", required: false }
+      - { label: "Source", name: "source", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "ABC code", name: "abc", widget: "text" }

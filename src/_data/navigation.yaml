@@ -3,3 +3,5 @@ items:
     url: /tunes/alphabetical
   - text: Tunes (Key)
     url: /tunes/bykey
+  - text: Admin
+    url: /admin

@@ -1,5 +1,6 @@
 ---
 title: Abe's Retreat
+source: https://abcnotation.com/tunePage?a=thesession.org/tunes/14037.no-ext/0001
 date: 2022-08-14T06:13:30.991Z
 abc: |-
   X: 1
@@ -16,4 +17,4 @@ key: AEAE
 tags:
   - Tunes in AEAE
 ---
-Copied from <https://abcnotation.com/tunePage?a=thesession.org/tunes/14037.no-ext/0001>
+[](https://abcnotation.com/tunePage?a=thesession.org/tunes/14037.no-ext/0001)

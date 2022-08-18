@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include "./partials/head.html" %}
+    {% include "./partials/head.njk" %}
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    {% include "./partials/navbar.njk" %}
 
     {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+    {% include "./partials/footer.njk" %}
 
     {#
     <script src="/static/js/abcjs-basic.js"></script>

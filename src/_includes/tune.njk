@@ -7,35 +7,39 @@ prism: true
     <div class="pb-5 mb-5 border-b border-gray-100">
         <h1 class="font-bold text-5xl">{{title}}</h1>
         <p class="text-center text-base leading-6 font-medium text-gray-500">
-            <time> {{ date | readableDate }}
-                by
-                <a>{{ author }}</a>
+            <time>
+                {{ date | readableDate }}
 
             </time>
         </p>
 
     </div>
 
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        Content
-        {{ content | safe }}
-    </article>
+    <div class="mx-auto max-w-3xl content-center">
 
-    <div class="mx-auto max-w-4xl content-center">
-
-        {% if abc %}
-
-        <label for="ABCMusic" class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-400">ABC notation
-            string:</label>
-
-        <textarea name="ABCMusic" id="abcText" cols="80" rows="12" spellcheck="false"
-            class="block p-2.5 w-3xl text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{{ abc }}</textarea>
-        {% endif %}
-        
-        <div id="warnings" class="my-2"></div>
-        <hr>
+    {% if abc %}
         <div id="paper" class="my-2"></div>
+        <hr>
+        
+
+        <div class="hidden">
+            
+            <div id="warnings" class="my-2"></div>
+            <hr>
+            <label for="ABCMusic" class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-400">ABC notation
+            string:</label>
+            <textarea name="ABCMusic" id="abcText" cols="80" rows="12" spellcheck="false"
+            class="block p-2.5 w-3xl text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{{ abc }}</textarea>
+        </div>
+    {% endif %}
 
     </div>
+
+    {% if content %}
+        <article class="prose lg:prose-xl my-4 mx-auto">
+        Content
+        {{ content | safe }}
+        </article>
+    {% endif %}
 
 </div>

@@ -13,12 +13,13 @@
   <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
 {% endif %}
 
-{% if abc %}
-  
 <script src="/static/js/abcjs-basic.js"></script>
 {# <script src="/static/js/abcjs-plugin-min.js"></script> #}
+{# <script src="/static/js/scripts.js"></script> #}
 
-<script type="text/javascript">
+{% if abc %}
+{% include "partials/abcjsScript.njk" %}
+{# <script type="text/javascript">
   window.onload = function() {
     new ABCJS.Editor("abcText", { 
       canvas_id: "paper",
@@ -27,6 +28,6 @@
     });
   }
 
-</script>
+</script> #}
 
 {% endif %}

@@ -32,7 +32,13 @@ module.exports = function (eleventyConfig) {
     "./node_modules/abcjs/dist/abcjs-basic.js": "./static/js/abcjs-basic.js",
     "./node_modules/abcjs/dist/abcjs-basic.js.map": "./static/js/abcjs-basic.js.map",
     "./node_modules/abcjs/dist/abcjs-plugin-min.js": "./static/js/abcjs-plugin-min.js",
+    "./src/static/js/scripts.js": "./static/js/scripts.js",
   });
+
+   // Copy Image Folder to /_site
+   eleventyConfig.addPassthroughCopy({
+    "./src/static/css/": "./static/css/"});
+
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");

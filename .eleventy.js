@@ -55,6 +55,14 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addCollection("tunesAscending", (collection) =>
+    collection.getFilteredByGlob("_tunes/*.md").sort((a, b) => {
+      if (a.data.title > b.data.title) return -1;
+      else if (a.data.title < b.data.title) return 1;
+      else return 0;
+    })
+  );
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
@@ -64,3 +72,4 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 };
+

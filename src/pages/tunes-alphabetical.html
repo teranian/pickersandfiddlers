@@ -4,12 +4,12 @@ permalink: /tunes/alphabetical/
 ---
 
 <section class="mt-15">
-    <p class="subtitle">Click a tune name to view the dots.</p>
-    {% set tunelist = collections.tunes %}
+    <p class="subtitle my-10 ">Click a tune name to view the dots.</p>
+    {# {% set tunelist = collections.tunes %} #}
 
-    {% for tunes in tunelist | reverse %}
-        <article class="my-8 ">
-            <p class="font-bold text-3xl text-gray-900 mb-2">
+    {% for tunes in collections.tunes  %}
+       
+            <p class=" text-3xl text-gray-900 mb-3">
                 <a href="{{ tunes.url | url }}">
                     {% if tunes.data.title %}
                         {{ tunes.data.title }}
@@ -20,6 +20,6 @@ permalink: /tunes/alphabetical/
                 </a>
             </p>
 
-        </article>
+       
     {% endfor %}
 </section>

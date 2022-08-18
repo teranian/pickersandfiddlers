@@ -4,39 +4,122 @@ permalink: /tunes/bykey/
 ---
 
 <section class="mt-15">
-    <p>Click a tune name to view the dots.</p>
+    <p class="subtitle my-10 ">Click a tune name to view the dots.</p>
+    <h2 class="font-bold text-3xl mb-6">Tunes in A</h2>
     {% set tunelist = collections.tunes %}
-
-    {% for tunes in tunelist | reverse %}
-        <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "A" %}
+            <p class=" text-3xl text-gray-900 mb-3">
                 <a href="{{ tunes.url | url }}">
-                    {% if tunes.data.title %}
-                        {{ tunes.data.title }}
-                    {% else %}
-                        Untitled
-                    {% endif %}
-                </a>
-                <span>({{ tunes.data.key }})</span>
-            </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
-                <time>
-                    {{ tunes.date | readableDate }}
-
-                </time>
-            </p>
-            {% if tunes.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
-                    {{ tunes.data.description }}
-                </p>
-            {% endif %}
-
-            <p>
-                <a href="{{ tunes.url | url }}" class="text-indigo-500 font-bold text-lg">
-                    Read more →
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
                 </a>
             </p>
+        {% endif %}
+    {% endfor %}
 
-        </article>
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in AEAE</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "AEAE" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in Am</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "Am" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in B</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "B" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in C</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "C" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in D</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "D" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in DDAD</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "DDAD" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in Em</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "Em" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in G</h2>
+    {% set tunelist = collections.tunes %}
+    {% for tunes in tunelist %}
+        {% if tunes.data.key == "G" %}
+            <p class=" text-3xl text-gray-900 mb-3">
+                <a href="{{ tunes.url | url }}">
+                    {{ tunes.data.title }}
+                    <span>({{ tunes.data.key }})</span>
+                </a>
+            </p>
+        {% endif %}
     {% endfor %}
 </section>

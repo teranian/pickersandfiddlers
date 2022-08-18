@@ -177,6 +177,9 @@
 	font-size: 20px;
 	width: 50px;
 }
+input.abcjs-midi-tempo {
+	color: black;
+}
 .abcjs-large .abcjs-tempo-wrapper {
 	font-size: 20px;
 }

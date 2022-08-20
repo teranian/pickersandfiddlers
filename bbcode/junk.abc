@@ -1,0 +1,147 @@
+X:1
+T: Stone's Rag
+T:Lone Star Rag
+M:4/4
+L:1/8
+Q:1/4=220
+Z: Bob Buckley's adaptation
+K:C
+G2A2B2 | "C"cBcg- gage|agec- cdcA|"F"FGAc- cdcA|dcAF- FGA2| \
+   "G"BdBG- GGAG|BdBG- GGAG|"C"cBca- age2|1g2 :|2 c2 ||
+|:z2g2^g2|"A"agea- age2|agea- age2|"D7"dcAd- dcA2|dcAd- dcA2 |1 \
+"G"BdBG- GGAG|
+   BdBG- GGAG| "C"cBca- age2| c2 :|2 \
+"C"c'4 "Am"a4|"A7"gage- "D7"edc2|"G"GAce- ecd2 | "C"c2 |]
+
+X:2
+T:Margaret's Waltz
+C:Pat Shaw
+R:waltz
+M:3/4
+L:1/8
+K:Amaj
+c2| "A"E3 FAB|c4 c2|"D"BA F2 A2|"E"B4 c2|\
+"A"E3 FAB|ce3 AB|"E6"c2c2 "E7"B2|"A"A4:|
+cd|"C#m"e2 f2 g2|"A"a2 g2 a2|"D"fe d2 f2|"E7"e4 cB|\
+"F#m"A3 B cd|"A"e2 c2 e2|"D"fe d2 c2|B4 cd|
+"C#m"e2 f2 g2|"F#m"a2 g2 f2|"Bm"e2 d2 c2|"E7"B4 c2|\
+"A"E3 FAB|ce3 AB|"E7"c2 c2 B2|"A"A4|]
+
+X:3
+T: Midnight on the Water
+R: waltz
+M: 3/4
+L: 1/8
+K: Dmaj
+DE |"D"Fz F2 FE | Fz F2 FE|F A3 AB|AF ED DE | \
+F2 "G"d3 B |"D" AF D2DE |"A" F2 AF EF |1"D" D4 :|2"D" D4 (3ABc||
+|:"D"d2dc de|dc BA Bc|d3 B AF|D4 d2|\
+"Em"e4 ef|"Em7" e2 d2 e2|"Bm"f3e fe|"F#m7"dc BA Bc|
+"G"d3 c de|"G6" dc BA Bc |"D" d3 B AF |D4 DE |\
+"D"F2 d2 "G"B2 |"D" A3 F DE |"A" F2 AF EF |"D" D6|]
+%%newpage
+
+X: 4
+T:Old Joe Clark
+M:4/4
+L:1/4
+K:A
+P:A
+e|"A"ef =gf|"A"ed cA|"A"ef =gf|"G"e4|"A"ef =gf|"A"ed c2|"A"Ac "G"B/A/=G\
+|"A"A3:|
+P:B
+E|"A"AA/A/ A2|"A"cB A2|"A"AA/A/ AA|"G"=G3 E|"A"AA/A/ A2|"A"cB A2|\
+"A"Ac "G"B/A/=G|"A"A3:|
+
+%%newpage
+
+X: 5
+T: Arkansas Traveler, The
+S: http://thesession.org/tunes/5583
+R: reel
+M: 4/4
+L: 1/8
+Q:1/4=220
+K: Dmajor
+B,C | "D"DFED "G"B,2B,2 | "D"A,2A,2 "G"D4 | "A"E2E2 "D"F2F2 | "A"EFED "D"B,2A,2 | \
+"D"DFED "G"B,2B,2  | "D"A,2A,2 "G"D4 | "D"dcdA "G"BdAG | "A"FDEC "D"D2 :|
+fg| "D"agfa "Em"gfeg | "D"fedf "A"edce | "D"dcdf "A7"edeg |"D"fedf "A7"e2fg | \
+"D"agfa "Em"gfeg | "D"fedf "A"edce | "D"dcdA "G"BdAG | "A7"FDEC "D"D2 :|
+
+X: 6
+T:Turkey in the Straw, The
+%%transpose -7
+R:Reel
+C:Trad.
+O:USA
+M:4/4
+L:1/8
+Q:1/4=220
+K:D
+"A7"fe|"D"dcde d2 FG|ABAF A2 de|f2 f2 fede|"A7"f2 e2 e2 fe| \
+"D"dcde d2 FG|ABAF A2 de|f a2 b afde|"D"f2 "A7"e2 "D"d2:|
+|:a2|"D"f a2 f a2 a2|f a2 f a2 a2|"G"g b2 g b2 b2|g b2 g b2 b2 | \
+"D"d'2 d'2 a2 a2|f2 f2 "A7"e2 de|f a2 b afde|"D"f2 "A7"e2 "D"d2:|
+
+%%newpage
+
+X: 7
+T: Over the Waterfall
+O: Old-Time
+M:2/4
+L:1/16
+Q:1/4=120
+R: Reel
+K: D
+de| "D"f2a2 "A7"gfe2| "D"d2B2 A2de| f2a2 "A7"gfe2| "D"d6 de| \
+    "D"f2a2 "A7"gfe2| "D"d2B2 A2AB| "C"=c4 B2A2| "G"G6 :|
+FG| "D"A2AA "G"B2B2| "D"ABAG F2FG| A2d2 "A7"cde2| "D"d6FG| \
+    "D"A2AA "G"B2B2| "D"ABAG F2FG| A2AA "A7"GFE2| "D"D6 :|
+W:$2You can play Em or Bm instead of G in the second line.$1
+
+X: 8
+T: Aristocracy
+T:Southern Aristocracy
+T:Colored Aristocracy
+R: Reel
+O: 19th-Century American
+M: 2/4
+L: 1/16
+Q:1/4=120
+K: G
+E2F2 \
+|"G"G2>A2 GED2 | G6-A2 | "Em"B2>c2 BAG2 | E6 B2 \
+| "C"cBcd e2dc | "G"BABc d2cB \
+|1 "A"A2B2 "A7"A2G2 | "D7"A2D2 \
+:|2 "A7"A2B2 "D7"dBA2 | "G"G4 ||
+|:e2f2 |"G"g2>a2 ged2 | "Em"e6 e2 | \
+ e2>f2 edB2 | B4 A2B2 | "C"cBcd e2dc \
+| "G"BABc d2cB |1 "A"A2B2 "A7"c2^c2 | "D7"d2^d2 \
+:|2 "A7"A2B2 "D7"dBA2 | "G"G4 |]
+
+X: 9
+T: Liza Jane
+R: Reel
+M: C|
+L: 1/16
+Q:1/4=120
+K: A
+e2|"A"a2f2 e2c2 | fecB A2>e2 | a2f2 e2c2 | "F#m"f4 f2>e2 | "A"a2f2 e2c2 | \
+fecB A2B2 | cBAF "E7"E2F2 | "A"A6 :| 
+B2|"A"c4 c3B | B2A2- A2>B2 | \
+c3B cBA2 | "F#m"F6 E2 | "A"F2A2 B2AB | c2c2 B2AB | cBAF "E7"E2F2 | "A"A6 :|
+
+%%newpage
+
+X: 10
+T:Girl I left Behind Me, The
+T:Brighton Camp
+M:2/4
+L:1/8
+K:G
+g/f/|"G"ed/c/ BG|"C"AG ED|"G"GG G/A/B/c/|"D7"d2 Bg/f/| \
+"G"ed/c/ BA|"C"BG EG|"D7"F/G/A DE/F/|"G"G2G:|
+d/c/|"G"Bd ef|gd BG|Bd ef|"C"g2 "D7"fg/f/| \
+"G"ed/c/ BG|"C"AG EG|"D7"FA DE/F/|"G"G2G:|
+
+%%newpage

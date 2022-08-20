@@ -1,0 +1,60 @@
+  .titles { margin: auto; padding: 4cm 0cm 0cm 0cm; }
+  .centre { margin: auto; }
+  td.abcid { text-align: right; padding: 0px 10px 0px 0px; }
+  .ncb { margin: 0px; padding: 0px; 
+  		column-break-inside: avoid;  -webkit-column-break-inside: avoid; 
+  		column-break-after: avoid;  -webkit-column-break-after: avoid; 
+		break-inside: avoid-column;
+	        -webkit-break-inside: avoid;
+	        break-inside: avoid;
+	}
+  .cb { break-after: column; height: 2px; margin: 0px; padding: 0px; }
+  div.xid { width: 2em; float: left; text-align: right; margin-right: 5px; margin-left: 0px; }
+@media screen {
+  div.index { margin: 0.2cm; padding: 0.4cm 0.2cm; background-color: #eeffee; width: 20.5cm; }
+  div.section { page-break-after: always; }
+  div.colidx { column-count: 3; -moz-column-count: 3; }
+
+  div.navblock {
+	display: block; padding: 5px 2px; 
+	position: sticky; top: 2px; right: 5px;
+	background-color: #eeeeff; 
+  }
+  header {
+	display: block; padding: 5px 2px; 
+	background-color: #ffeeee; 
+  }
+    li a:hover { background-color: yellow; }
+    svg { display: block; /* visibility: hidden; */ }
+}
+@media print {
+  .np { page-break-before: always; }
+  div.index { margin: 0.3cm; padding: 0.1cm 0.2cm; border: 2px solid gray; break-after: page; }
+  div.section { page-break-after: always; }
+  div.colidx { column-count: 3; -moz-column-count: 3; page-break-inside: auto; }
+  div.navblock { position: fixed; top: 5px; right: 5px; background-color: #eeeeff; }
+  header { margin: 0.2cm; }
+  /* div.index { margin: 1cm 1cm; } */
+  @page { header { display: block; } }
+  @page :first { header { display: hidden; } }
+}
+
+div.navblock span { font-weight: bold; background-color: #e8f8ff;
+                    border: 1px solid lightblue; border-radius: 10px;
+                    text-align: center; width: 120px; padding: 4px 10px; margin: 0px 10px;
+                  }
+
+body { font: 12px Georgia, Schoolbook, serif; }
+h1 { font: bold 15px Georgia, Schoolbook, serif; }
+h2 { font: bold 13px Georgia, Schoolbook, serif; page-break-after: avoid; }
+
+p.abctitle { margin: .25em 0px; }
+
+div.front { width: 16cm; margin: 0 auto; }
+div.titles { text-align: center; }
+p.title { font: bold 30px Georgia, Schoolbook, serif; }
+p.subtitle { font: italic 26px Georgia, Schoolbook, serif; margin: 0px 0px 1.5cm 0px; }
+p.author { font: italic 24px Georgia, Schoolbook, serif;  margin: 0px 0px 1.5cm 0px; }
+p.date { font: 18px Georgia, Schoolbook, serif;  margin: 0px 0px 1.5cm 0px; }
+button.title { page-break-after: auto; font: normal 12px Georgia, Schoolbook, serif; text-align: left; width: 100%; }
+button.title a:link { text-decoration: none; }

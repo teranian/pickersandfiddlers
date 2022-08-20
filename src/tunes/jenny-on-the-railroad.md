@@ -6,7 +6,7 @@ abc: |-
   X:1
   T:Jenny on the Railroad
   S:Carter Brothers and Son
-  M:C|
+  M:4/4
   L:1/8
   F:https://www.slippery-hill.com/recording/jenny-railroad
   Z:Transcribed by Andrew Kuntz

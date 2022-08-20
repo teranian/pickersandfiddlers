@@ -27,7 +27,7 @@ abc: >-
 
   K: Amix
 
-  (3ef^g \
+  (3ef^g \ 
 
   | a2a2 gagf | efed c2(3ef^g | a2a2 gagf |[M:2/4]edc2 |[M:C|] e8- | e6 a2- |
     a2a2 gagf | efed c2A2 | EFAB cdcB |[M:2/4] A^G3 |[M:C|] A4- | A6 :|

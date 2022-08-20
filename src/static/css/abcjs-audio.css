@@ -187,3 +187,38 @@ input.abcjs-midi-tempo {
 .abcjs-css-warning {
 	display: none;
 }
+main {
+	max-width: 770px;
+	margin: 0 auto;
+}
+.feedback {
+	height: 600px;
+	font-family: Arial, "sans-serif";
+}
+.highlight {
+	fill: #0a9ecc;
+}
+.abcjs-cursor {
+	stroke: red;
+}
+.click-explanation {
+	color: red;
+	font-style: italic;
+}
+.beat {
+	font-weight: bold;
+}
+.label {
+	color: #888888;
+}
+.midi {
+	margin-top: 20px;
+	margin-left: 5px;
+}
+.seek-controls {
+	margin-top: 5px;
+}
+.seek-controls.disabled {
+	background-color: #cccccc;
+	opacity: 0.5;
+}

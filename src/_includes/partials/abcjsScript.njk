@@ -1,29 +1,115 @@
-
 <link rel="stylesheet" type="text/css" href="/static/css/abcjs-audio.css"/>
 
 <script type="text/javascript">
 
-  {# Function to render the sheet music dots #}
-  {# window.onload = function () {
-    new ABCJS.Editor("abc", {
-      canvas_id: "paper",
-      warnings_id: "warnings",
-      abcjsParams: {
-        responsive: "resize"
-      }
-    });
-  } #}
+{# window.onload = function () {
+  
+ new ABCJS.Editor("abc", {
+    canvas_id: "paper",
+    warnings_id: "warnings",
+    abcjsParams: {
+      responsive: "resize"
+    }
+  });
+} #}
 
-  var abcjsEditor;
+{# var abc = document.getElementById("abc").value; #}
+{# 
+window.onload = function () {
+  new ABCJS.Editor("abc", {
+    canvas_id: "paper",
+    generate_warnings: true,
+    warnings_id: "warnings",
+    synth: {
+      el: "#audio",
+      options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
+    },
+    abcjsParams: {
+      responsive: "resize",
+      oneSvgPerLine: true
+    }
+  });
+}; #}
+
+
 
   window.onload = function () {
-    abcjsEditor = new ABCJS.Editor("abc", {
+    
+		function CursorControl() {
+			var self = this;
+
+			self.onReady = function() {
+				var downloadLink = document.querySelector(".download");
+				downloadLink.addEventListener("click", download);
+				downloadLink.setAttribute("style", "");
+				var clickEl = document.querySelector(".click-explanation")
+				clickEl.setAttribute("style", "");
+			};
+			self.onStart = function() {
+				var svg = document.querySelector("#paper svg");
+				var cursor = document.createElementNS("http://www.w3.org/2000/svg", "line");
+				cursor.setAttribute("class", "abcjs-cursor");
+				cursor.setAttributeNS(null, 'x1', 0);
+				cursor.setAttributeNS(null, 'y1', 0);
+				cursor.setAttributeNS(null, 'x2', 0);
+				cursor.setAttributeNS(null, 'y2', 0);
+				svg.appendChild(cursor);
+
+			};
+			self.beatSubdivisions = 2;
+			self.onBeat = function(beatNumber, totalBeats, totalTime) {
+				if (!self.beatDiv)
+					self.beatDiv = document.querySelector(".beat");
+				self.beatDiv.innerText = "Beat: " + beatNumber + " Total: " + totalBeats + " Total time: " + totalTime;
+			};
+			self.onEvent = function(ev) {
+				if (ev.measureStart && ev.left === null)
+					return; // this was the second part of a tie across a measure line. Just ignore it.
+
+				var lastSelection = document.querySelectorAll("#paper svg .highlight");
+				for (var k = 0; k < lastSelection.length; k++)
+					lastSelection[k].classList.remove("highlight");
+
+				var el = document.querySelector(".feedback").innerHTML = "<div class='label'>Current Note:</div>" + JSON.stringify(ev, null, 4);
+				for (var i = 0; i < ev.elements.length; i++ ) {
+					var note = ev.elements[i];
+					for (var j = 0; j < note.length; j++) {
+						note[j].classList.add("highlight");
+					}
+				}
+
+				var cursor = document.querySelector("#paper svg .abcjs-cursor");
+				if (cursor) {
+					cursor.setAttribute("x1", ev.left - 2);
+					cursor.setAttribute("x2", ev.left - 2);
+					cursor.setAttribute("y1", ev.top);
+					cursor.setAttribute("y2", ev.top + ev.height);
+				}
+			};
+			self.onFinished = function() {
+				var els = document.querySelectorAll("svg .highlight");
+				for (var i = 0; i < els.length; i++ ) {
+					els[i].classList.remove("highlight");
+				}
+				var cursor = document.querySelector("#paper svg .abcjs-cursor");
+				if (cursor) {
+					cursor.setAttribute("x1", 0);
+					cursor.setAttribute("x2", 0);
+					cursor.setAttribute("y1", 0);
+					cursor.setAttribute("y2", 0);
+				}
+			};
+		}
+
+		var cursorControl = new CursorControl();
+
+    let abcjsEditor = new ABCJS.Editor("abc", {
       canvas_id: "paper",
       warnings_id: "warnings",
       synth: {
         el: "#audio",
         options: {
-          displayLoop: true,
+          displayLoop: false,
           displayRestart: true,
           displayPlay: true,
           displayProgress: true,
@@ -35,28 +121,38 @@
         clickListener: clickListener
       },
       selectionChangeCallback: selectionChangeCallback
-    });
+    }, abcOptions);
 
     document
       .getElementById("midi")
       .addEventListener("click", downloadMidi);
   };
+  
+		function clickListener(abcElem, tuneNumber, classes, analysis, drag, mouseEvent) {
+			var output = "currentTrackMilliseconds: " + abcElem.currentTrackMilliseconds + "<br>" +
+				"currentTrackWholeNotes: " + abcElem.currentTrackWholeNotes + "<br>" +
+				"midiPitches: " + JSON.stringify(abcElem.midiPitches, null, 4) + "<br>" +
+				"gracenotes: " + JSON.stringify(abcElem.gracenotes, null, 4) + "<br>" +
+				"midiGraceNotePitches: " + JSON.stringify(abcElem.midiGraceNotePitches, null, 4) + "<br>";
+			document.querySelector(".clicked-info").innerHTML = "<div class='label'>Clicked info:</div>" +output;
 
-  function clickListener(abcElem, tuneNumber, classes, analysis, drag, mouseEvent) {
-    var lastClicked = abcElem.midiPitches;
-    if (!lastClicked) 
-      return;
-    
-    ABCJS
-      .synth
-      .playEvent(lastClicked, abcElem.midiGraceNotePitches, abcjsEditor.millisecondsPerMeasure())
-      .then(function (response) {
-        console.log("note played");
-      })
-      .catch(function (error) {
-        console.log("error playing note", error);
-      });
-  }
+			var lastClicked = abcElem.midiPitches;
+			if (!lastClicked)
+				return;
+
+			ABCJS.synth.playEvent(lastClicked, abcElem.midiGraceNotePitches, synthControl.visualObj.millisecondsPerMeasure()).then(function (response) {
+				console.log("note played");
+			}).catch(function (error) {
+				console.log("error playing note", error);
+			});
+		}
+
+
+		var abcOptions = {
+			add_classes: true,
+			clickListener: self.clickListener,
+			responsive: "resize"
+		};
 
   function selectionChangeCallback(start, end) {
     if (abcjsEditor) {
@@ -67,15 +163,4 @@
     }
   }
 
-  function downloadMidi() {
-    var abc = document
-      .getElementById("abc")
-      .value;
-    var a = document.getElementById("midi-download");
-    var midi = ABCJS
-      .synth
-      .getMidiFile(abc, {midiOutputType: "encoded"})
-    a.setAttribute("href", midi)
-    a.click();
-  }
 </script>

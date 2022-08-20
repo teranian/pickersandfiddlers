@@ -107,7 +107,7 @@ def main():
     p.add_argument("-g", '--setindex', action='store_false', help="no grouping, omit 'set index'")
     p.add_argument("-a", '--alphasetindex', action='store_true', help="set index sorted by name of first tune")
     p.add_argument('--all', action='store_true', help="index all titles")
-    p.add_argument('--pavindex', action='store_true', help="index of singers (%p:v in ABC)")
+    # p.add_argument('--pavindex', action='store_true', help="index of singers (%p:v in ABC)")
     p.add_argument("-d", '--danceindex', action='store_false', help="no dance types, omit 'dance index'")
     p.add_argument("-s", '--style', type=argparse.FileType('r'), help="CSS file to be included")
     p.add_argument("-f", "--frontmatter", type=argparse.FileType('r'), help="HTML front matter for inclusion")
@@ -117,8 +117,8 @@ def main():
     # read an XHTML file created by abcm2ps -X 
     doc = bs4.BeautifulSoup(args.file.read(), 'lxml')
     
-    # add Paverty's CSS
     if args.style:
+#        # add Paverty's CSS
 #        pavcss = doc.new_tag("link", rel="stylesheet", href=args.style.name)
 #        doc.head.title.insert_before(pavcss)
 #        pavcss.insert_after('\n') # on a new line
@@ -301,13 +301,13 @@ def main():
            'march', 'slide', 'schottische', 'maggot', 'song', 'other')
     
     # Paverty singer notation - for indexing
-    if args.pavindex:
-        singer = {'bb':'Bob Buckley', 'gc':'Graham Chalker', 'sd':'Simone Dawson', 
-                  'br': 'Bryan Rae', 'rk':'Rick Kenyon', 'bp':'Bill Pitt', 
-                  'sd2':'Sarah Davies'}
-        sditems = [(x.vocalist(), xt, x.xid) for x in abcs for xt in (x.title(),) if not xt.startswith('-')]
-        sditems = [(singer[s] if s in singer else s, t, x) for s,t,x in sditems if s!='-']
-        addindex("Singers", sditems, sort=True)
+    # if args.pavindex:
+    #     singer = {'bb':'Bob Buckley', 'gc':'Graham Chalker', 'sd':'Simone Dawson', 
+    #               'br': 'Bryan Rae', 'rk':'Rick Kenyon', 'bp':'Bill Pitt', 
+    #               'sd2':'Sarah Davies'}
+    #     sditems = [(x.vocalist(), xt, x.xid) for x in abcs for xt in (x.title(),) if not xt.startswith('-')]
+    #     sditems = [(singer[s] if s in singer else s, t, x) for s,t,x in sditems if s!='-']
+    #     addindex("Singers", sditems, sort=True)
         
     tunecnts = dict((x, 0) for x in dts)
     def gettype(sx):

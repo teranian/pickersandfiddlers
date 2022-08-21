@@ -1,16 +1,44 @@
+%abc-2.1
+%%font Georgia
+%%leftmargin .5cm
+%%rightmargin .5cm
+%%topmargin 1cm
+%%botmargin 0.75cm
+%%titlefont Georgia-Bold 14
+%%subtitlefont Georgia-Italic 12
+%%partsfont Georgia 12
+%%tempofont Georgia 12
+%%gchordfont Georgia 16
+%%infofont Georgia
+%%textfont Courier
+%%setfont-1 Georgia 12
+%%setfont-2 Georgia-Italic 12
+%%setfont-3 Courier 12
+%%setfont-4 Georgia-Bold 12
+%%vocalfont Georgia 12
+%%wordsfont Georgia 12
+%%composerfont Georgia 11
+%%annotationsfont Courier 11
+%%writefields XH
+%%writefields P no
+%%historyfont Georgia-Italic 11
+%%MIDI gchordon
+% 41 violin. 42 violoa 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
+%%MIDI program 41
+
 X:1
 T: Stone's Rag
 T:Lone Star Rag
 M:4/4
 L:1/8
 Q:1/4=220
-Z: Bob Buckley's adaptation
+Z: Bob Buckley's adaptation, first learned from Brad Tate
 K:C
 G2A2B2 | "C"cBcg- gage|agec- cdcA|"F"FGAc- cdcA|dcAF- FGA2| \
    "G"BdBG- GGAG|BdBG- GGAG|"C"cBca- age2|1g2 :|2 c2 ||
 |:z2g2^g2|"A"agea- age2|agea- age2|"D7"dcAd- dcA2|dcAd- dcA2 |1 \
-"G"BdBG- GGAG|
-   BdBG- GGAG| "C"cBca- age2| c2 :|2 \
+   "G"BdBG- GGAG|
+BdBG- GGAG| "C"cBca- age2| c2 :|2 \
 "C"c'4 "Am"a4|"A7"gage- "D7"edc2|"G"GAce- ecd2 | "C"c2 |]
 
 X:2
@@ -43,6 +71,7 @@ F2 "G"d3 B |"D" AF D2DE |"A" F2 AF EF |1"D" D4 :|2"D" D4 (3ABc||
 
 X: 4
 T:Old Joe Clark
+C: Trad.
 M:4/4
 L:1/4
 K:A
@@ -57,6 +86,7 @@ E|"A"AA/A/ A2|"A"cB A2|"A"AA/A/ AA|"G"=G3 E|"A"AA/A/ A2|"A"cB A2|\
 
 X: 5
 T: Arkansas Traveler, The
+C: Trad.
 S: http://thesession.org/tunes/5583
 R: reel
 M: 4/4
@@ -71,6 +101,7 @@ fg| "D"agfa "Em"gfeg | "D"fedf "A"edce | "D"dcdf "A7"edeg |"D"fedf "A7"e2fg | \
 X: 6
 T:Turkey in the Straw, The
 %%transpose -7
+C: Trad.
 R:Reel
 C:Trad.
 O:USA

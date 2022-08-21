@@ -56,7 +56,7 @@ class ABCsong(Song):
     """
     class for storing and accessing ABC song/tune notation
     Note: the X: lines was trimmed from the front.
-    No blank line at the end. 
+    No blank line at the end (or within a song/tune). 
     """
     def __init__(self, plines, attrs=None):
         global oldplines

@@ -14,7 +14,7 @@
 } #}
 
 {# var abc = document.getElementById("abc").value; #}
-{# 
+
 window.onload = function () {
   new ABCJS.Editor("abc", {
     canvas_id: "paper",
@@ -22,18 +22,18 @@ window.onload = function () {
     warnings_id: "warnings",
     synth: {
       el: "#audio",
-      options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
+      options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true, defaultQpm: 60 }
     },
     abcjsParams: {
       responsive: "resize",
       oneSvgPerLine: true
     }
   });
-}; #}
+};
 
 
 
-  window.onload = function () {
+  {# window.onload = function () {
     
 		function CursorControl() {
 			var self = this;
@@ -151,7 +151,8 @@ window.onload = function () {
 		var abcOptions = {
 			add_classes: true,
 			clickListener: self.clickListener,
-			responsive: "resize"
+			responsive: "resize",
+			options: { defaultQpm: 80 }
 		};
 
   function selectionChangeCallback(start, end) {
@@ -161,6 +162,6 @@ window.onload = function () {
         .getElementFromChar(start);
       console.log(el);
     }
-  }
+  } #}
 
 </script>

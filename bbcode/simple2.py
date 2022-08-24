@@ -93,20 +93,82 @@ def main():
     #split the file contents into separate tunes
     tunes = re.split(r'^(X:\s*(\d+)).*\n|^(\s*%%\s*newpage).*\n', abc, flags=re.M)
     hdr = tunes.pop(0)
-    gen   = (x.rstrip() if x else x for x in tunes)
+    gen   = (x.strip() if x else x for x in tunes)
     tunetup = [x for x in zip(gen, gen, gen, gen)]
     # for x in tunetup:
     #     print()
     #     print(x)
+    
+    class Tune:
+        def __init__(self, tx):
+            self.abc = '\n'.join((tx[0], tx[3]))
+            self.id  = tx[1]
+            kpos = self.abc.find('K:')
+            self.hdrlen = self.abc.find('\n', kpos)
+            self.key = self.abc[kpos+2:self.hdrlen].strip()
+            return
+            
+        def divstr(self):
+            return # should format for output
+        
+        def titles(self):
+            # return the list of titles for a tune
+            ts = [x[2:].strip() for x in self.abc[:self.hdrlen].split('\n') if x.startswith('T:')]
+            return ts
+        
+        def tidx(self):
+            "return a title index tuple generator"
+            return ((self.id, t, self.key) for t in self.titles())
+        
+        def cidx(self):
+            return self.id, self.titles()[0], self.key
+            
+    def mktidx(ss):
+        "make a title index tuple from a list of tunes"
+        return sorted((t for x in ss for t in x.tidx()), key=lambda x:(x[1], x[0], x[2]))
+    
+    def mkcidx(ss):
+        "make a title index tuple from a list of tunes"
+        return [x.cidx() for x in ss]
+    
+    # build indexing data
+    ts = [Tune(x) for x in tunetup if not x[2]]
+    
+    cidxfmt = "    {0}. <a href='#xx{0}'>{1}</a> ({2})<br/>\n"        
 
     # process HTML from template
     # abcout = '\n'.join(mkseg(x) for x in tuneup)
     abcfmt = "<div id='xx{1}'><script class='abc' type='text/vnd.abc'>\n{0}\n{2}\n</script></div>\n"
     abchdr = "<script class='abc' type='text/vnd.abc'>\n{0}\n</script>\n"
 
-    
+    mx = mkcidx(ts)
+    tx = mktidx(ts)
+    tltrset = set(x[1][0] for x in tx)
+    tltrs = ' '.join("<a href='#tx{0}'>{0}</a>".format(a) for a in sorted(x for x in tltrset))
     with open(args.output if args.output else fn[:-4]+".htm", "wt") as dst:
             dst.write(htmls[0])
+            # output Contents
+            dst.write("  <h1>Contents</h1>\n  <div id='cidx'>\n")
+            dst.write("<p>\n")
+            for x in mx:
+                dst.write(cidxfmt.format(x[0], x[1], x[2]))
+            dst.write("</p>\n</div><div class='pb'></div>\n")
+            
+            # output Title index
+            # letter index list to start with. 
+            dst.write("  <h1>Title Index</h1>\n  <p>{0}</p>\n  <div id='tidx'>\n".format(tltrs))
+            lx = ''
+            for x in tx: # we should use a python groupby here
+                # letter headings
+                if lx!=x[1][0]:
+                    if lx:
+                        dst.write('    </p>\n')
+                    lx = x[1][0]
+                    dst.write("    <h2 id='tx{0}'>".format(lx)+lx+"</h2><p>\n")
+                dst.write(cidxfmt.format(x[0], x[1], x[2]))
+            dst.write("    </p>\n</div><div class='pb'></div>\n")
+            
+            # now output all the ABC notation
             dst.write(abchdr.format(hdr))
             for x in tunetup:
                 if x[2] and x[2].startswith('%%newpage'):

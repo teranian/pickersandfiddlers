@@ -90,6 +90,7 @@ E|"A"AA/A/ A2|"A"cB A2|"A"AA/A/ AA|"G"=G3 E|"A"AA/A/ A2|"A"cB A2|\
 X: 5
 T: Arkansas Traveler, The
 C: Trad.
+O:USA
 S: http://thesession.org/tunes/5583
 R: reel
 M: 4/4
@@ -104,7 +105,6 @@ fg| "D"agfa "Em"gfeg | "D"fedf "A"edce | "D"dcdf "A7"edeg |"D"fedf "A7"e2fg | \
 X: 6
 T:Turkey in the Straw, The
 %%transpose -7
-C: Trad.
 R:Reel
 C:Trad.
 O:USA

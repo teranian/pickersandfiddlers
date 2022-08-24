@@ -7,6 +7,7 @@ abc: |-
   T:Farewell Trion
   L:1/8
   M:2/4
+  Q:140
   S:Uncle Joe Blalock, via Mack Blalock and James Bryan
   Z:Transcribed by Andrew Kuntz
   K:C

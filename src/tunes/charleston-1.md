@@ -21,6 +21,8 @@ abc: >-
   F:https://www.slippery-hill.com/recording/charleston-1
 
   Z:Transcribed by Andrew Kuntz
+  
+  Q:220
 
   K:C
 

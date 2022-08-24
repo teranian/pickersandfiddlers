@@ -19,6 +19,8 @@ abc: >-
   L:1/8
 
   Q:"Fast"
+  
+  Q:220
 
   R:Country Rag
 

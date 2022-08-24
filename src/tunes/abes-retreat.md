@@ -8,6 +8,7 @@ abc: |-
   R: reel
   M: 4/4
   L: 1/8
+  Q: 160
   K: Amix
   A2cB ABcd|efgf e2 A2-|-ABAG EBBA|GEFD ~E3G|
   A2cB ABcd|efgf efgz|aba2 gfed|1 cAAG A2EG:|2 cAAG A2ce||

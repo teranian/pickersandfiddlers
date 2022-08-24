@@ -8,6 +8,7 @@ abc: |-
   M:C|
   S:Jay Ungar
   Z:Transcribed by Andrew Kuntz
+  Q:180
   K:A
   [A,2E2] [E2A2] [E4c4]|cBAc BAFE|DFAc d2 de|fgaf ecBc|
   [A,2E2] [E2A2] [E3c3]B|cBAc BAcA|dcde fgaf|1 ecBc A4:|2ecBc A3||

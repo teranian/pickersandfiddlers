@@ -18,6 +18,8 @@ abc: >-
 
   Q:"Fast"
 
+  Q:220
+
   N:The
 
   D:Victor 19699-A (78 RPM), Capt. M.J. Bonner (1925)

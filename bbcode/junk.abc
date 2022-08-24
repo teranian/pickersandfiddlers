@@ -23,19 +23,18 @@
 %%writefields P no
 %%historyfont Georgia-Italic 11
 %%MIDI gchordon
-% 41 violin. 42 viola 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
+% 41 violin 42 viola 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
 %%MIDI program 41
 
 X:1
 T: Stone's Rag
 T:Lone Star Rag
+%%grid2 1
 M:4/4
 L:1/8
 Q:1/4=220
 Z: Bob Buckley's adaptation, first learned from Brad Tate
 K:C
-V:1
-%%grid2 1
 G2A2B2 | "C"cBcg- gage|agec- cdcA|"F"FGAc- cdcA|dcAF- FGA2| \
    "G"BdBG- GGAG|BdBG- GGAG|"C"cBca- age2|1g2 :|2 c2 ||
 |:z2g2^g2|"A"agea- age2|agea- age2|"D7"dcAd- dcA2|dcAd- dcA2 |1 \
@@ -65,11 +64,11 @@ M: 3/4
 L: 1/8
 K: Dmaj
 DE |"D"Fz F2 FE | Fz F2 FE|F A3 AB|AF ED DE | \
-F2 "G"d3 B |"D" AF D2DE |"A" F2 AF EF |1"D" D4 :|2"D" D4 (3ABc||
-|:"D"d2dc de|dc BA Bc|d3 B AF|D4 d2|\
+F2 "G"d3 B |"D" AF D2DE |"A" F2 AF EF |"D" D4 :|
+ (3ABc |:"D"d2dc de|dc BA Bc|d3 B AF|D4 d2|\
 "Em"e4 ef|"Em7" e2 d2 e2|"Bm"f3e fe|"F#m7"dc BA Bc|
 "G"d3 c de|"G6" dc BA Bc |"D" d3 B AF |D4 DE |\
-"D"F2 d2 "G"B2 |"D" A3 F DE |"A" F2 AF EF |"D" D6|]
+"D"F2 d2 "G"B2 |"D" A3 F DE |"A" F2 AF EF |"D" D4|]
 %%newpage
 
 X: 4

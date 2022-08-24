@@ -61,13 +61,11 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  eleventyConfig.addCollection("tunesAscending", (collection) =>
-    collection.getFilteredByGlob("tunes/*.md").sort((a, b) => {
-      if (a.data.title > b.data.title) return -1;
-      else if (a.data.title < b.data.title) return 1;
-      else return 0;
-    })
-  );
+  // this sorts a Collection descending by Title A > Z
+  eleventyConfig.addFilter('sortByTitle', values => {
+    return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title))
+  })
+  
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk

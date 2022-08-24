@@ -6,7 +6,7 @@ Created on Sat May 23 11:18:13 2020
 @author: Bob Buckley
 
 Create usable HTML from ABC file
-Based on a template file Simple.htm or Simple2.htm
+Based on a template file Simple1.htm or Simple2.htm
 These templates use the svgweb1-1.js and svgweb2-1.js modules to display scores.
 """
 
@@ -92,7 +92,7 @@ def main():
             
     #split the file contents into separate tunes
     tunes = re.split(r'^(X:\s*(\d+)).*\n|^(\s*%%\s*newpage).*\n', abc, flags=re.M)
-    hdr = tunes.pop(0)
+    hdr = tunes.pop(0) # expect a ABC Header - see assert above
     gen   = (x.strip() if x else x for x in tunes)
     tunetup = [x for x in zip(gen, gen, gen, gen)]
     # for x in tunetup:
@@ -137,7 +137,6 @@ def main():
     cidxfmt = "    {0}. <a href='#xx{0}'>{1}</a> ({2})<br/>\n"        
 
     # process HTML from template
-    # abcout = '\n'.join(mkseg(x) for x in tuneup)
     abcfmt = "<div id='xx{1}'><script class='abc' type='text/vnd.abc'>\n{0}\n{2}\n</script></div>\n"
     abchdr = "<script class='abc' type='text/vnd.abc'>\n{0}\n</script>\n"
 
@@ -175,7 +174,7 @@ def main():
                     dst.write("<div class='pb'></div>\n")
                 else:
                     dst.write(abcfmt.format(x[0], x[1], x[3]))
-            dst.write(htmls[1])
+            dst.write(htmls[1]) # output last bit of the template
     return
 
 if __name__=="__main__":

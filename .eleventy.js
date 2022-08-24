@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
     "./node_modules/abcjs/dist/abcjs-basic.js": "./static/js/abcjs-basic.js",
     "./node_modules/abcjs/dist/abcjs-basic.js.map": "./static/js/abcjs-basic.js.map",
     "./node_modules/abcjs/dist/abcjs-plugin-min.js": "./static/js/abcjs-plugin-min.js",
-    "./src/static/js/scripts.js": "./static/js/scripts.js",
+    "./src/static/js/abcscripts.js": "./static/js/abcscripts.js",
   });
 
    // Copy Image Folder to /_site
@@ -47,19 +47,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
   // Minify HTML
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
+  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  //   // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+  //   if (outputPath.endsWith(".html")) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true,
+  //     });
+  //     return minified;
+  //   }
 
-    return content;
-  });
+  //   return content;
+  // });
 
   // this sorts a Collection descending by Title A > Z
   eleventyConfig.addFilter('sortByTitle', values => {

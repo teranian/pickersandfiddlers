@@ -15,35 +15,21 @@ The static HTML site is based on the [https://neat-starter.netlify.app/](https:/
 
 In order to make changes to the structure of the static site, you can setup a local dev instance using the following commands:
 
-### 1\. Clone this Repository
 
-```
+``` bash
+# 1. Clone this Repository
 git clone https://github.com/teranian/pickersandfiddlers
-```
 
-### 2\. Navigate to the directory
-
-```
+# 2. Navigate to the directory
 cd pickersandfiddlers/
-```
 
-### 3\. Install dependencies
-
-```
+# 3. Install dependencies
 npm install
-```
 
-### 4\. Build the project to generate the first CSS
-
-This step is only required the very first time.
-
-```
+# 4. Build the project to generate the first CSS (This step is only required the very first time.)
 npm run build
-```
 
-### 5\. Run Eleventy
-
-```
+# 5. Run Eleventy
 npm run start
 ```
 

@@ -4,20 +4,19 @@
 <title>{{title}}</title>
 
 {% if description %}
-  <meta name="description" content="{{description}}"/>
+<meta name="description" content="{{description}}"/>
 {% endif %}
 
 <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
 
 {% if prism == true %}
-  <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+<link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
 {% endif %}
 
+{% if abc %}
 <script src="/static/js/abcjs-basic.js"></script>
 {# <script src="/static/js/abcjs-plugin-min.js"></script> #}
-{# <script src="/static/js/scripts.js"></script> #}
-
-{% if abc %}
-{% include "partials/abcjsScript.njk" %}
-
+{# <script src="/static/js/abcscripts.js"></script> #}
+<link rel="stylesheet" type="text/css" href="/static/css/abcjs-audio.css"/>
+{% include "partials/abcjs.njk" %}
 {% endif %}

@@ -20,7 +20,7 @@ abc: >-
 
   Q:"Fast"
   
-  Q:220
+  Q:260
 
   R:Country Rag
 

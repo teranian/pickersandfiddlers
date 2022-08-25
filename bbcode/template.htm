@@ -3,39 +3,37 @@
 	<meta charset="utf-8">
 	<head>
 		    <title>Read Text File</title>
-		    <script src="../abcjs/abcjs-basic-min.js" type="text/javascript"></script>
+		    <script src="../js/abcjs-basic-min.js" type="text/javascript"></script>
 	</head>
 	  
 	<body>
-		    <input type="file" name="inputfile"
-			             id="inputfile">
-		        <br>
+		<input type="file" name="inputfile" id="inputfile" accept=".abc"> <br>
 			   
-			    <pre id="output"></pre>
-			    <p>Tune string follows.</p>
-			    <pre id="properties"></pre>
-			    <pre id="tunestring"></pre>
-			    <div id="T0"></div>
+		<pre id="output"></pre>
+		<p>Tune string follows.</p>
+		<pre id="properties"></pre>
+		<pre id="tunestring"></pre>
+		<div id="T0"></div>
 			          
-			        <script type="text/javascript">
-					        document.getElementById('inputfile')
-            .addEventListener('change', function() {
+		<script type="text/javascript">
+			document.getElementById('inputfile')
+            	.addEventListener('change', function() {
 		                  
-		                var fr=new FileReader(), tb=null;
-		                fr.onload=function(){
-							var t = 0;
-							tb = new ABCJS.TuneBook(fr.result);
-					                document.getElementById('output').textContent='No. tunes= '+tb.tunes.length;
-					                document.getElementById('properties').textContent=Object.getOwnPropertyNames(tb.tunes[t]).toString();
-					                document.getElementById('tunestring').textContent=tb.tunes[t].title+'\n'+tb.tunes[t].pure+'\n'+'startPos = '+tb.tunes[t].startPos;
-					                // document.getElementById('tunestring').textContent=tb.tunes[1].abc;
-							ABCJS.renderAbc("T0", tb.tunes[t].abc);
-					                // document.getElementById('output').textContent=fr.result;
-					            }
+		    var fr=new FileReader(), tb=null;
+		    fr.onload=function(){
+				var t = 0;
+				tb = new ABCJS.TuneBook(fr.result);
+				document.getElementById('output').textContent='No. tunes= '+tb.tunes.length;
+				document.getElementById('properties').textContent=Object.getOwnPropertyNames(tb.tunes[t]).toString();
+				document.getElementById('tunestring').textContent=tb.tunes[t].title+'\n'+tb.tunes[t].pure+'\n'+'startPos = '+tb.tunes[t].startPos;
+				// document.getElementById('tunestring').textContent=tb.tunes[1].abc;
+				ABCJS.renderAbc("T0", tb.tunes[t].abc);
+				// document.getElementById('output').textContent=fr.result;
+			}
 		                  
-		                fr.readAsText(this.files[0]);
-		            })
-    </script>
+		    fr.readAsText(this.files[0]);
+		    })
+    	</script>
 	</body>
 	  
 </html>

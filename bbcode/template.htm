@@ -13,7 +13,9 @@
 		<p>Tune string follows.</p>
 		<pre id="properties"></pre>
 		<pre id="tunestring"></pre>
-		<div id="T0"></div>
+		<pre id="ts2"></pre>
+		<div id="contents"><h1>Contents</h1><p></p></div>
+		<div id="titles"><h1>Title Index</h1><p></p></div>
 			          
 		<script type="text/javascript">
 			document.getElementById('inputfile')
@@ -21,13 +23,41 @@
 		                  
 		    var fr=new FileReader(), tb=null;
 		    fr.onload=function(){
-				var t = 0;
+				var t = 2;
+				var x = document.getElementById('output');
+				var px = x.parentNode; // container for the Tune divs
+				var cz = document.getElementById('contents').lastChild;
+				var tz = document.getElementById('titles').lastChild;
 				tb = new ABCJS.TuneBook(fr.result);
-				document.getElementById('output').textContent='No. tunes= '+tb.tunes.length;
-				document.getElementById('properties').textContent=Object.getOwnPropertyNames(tb.tunes[t]).toString();
-				document.getElementById('tunestring').textContent=tb.tunes[t].title+'\n'+tb.tunes[t].pure+'\n'+'startPos = '+tb.tunes[t].startPos;
+				// document.getElementById('output').textContent='No. tunes= '+tb.tunes.length;
+				// document.getElementById('properties').textContent="properties = "+Object.getOwnPropertyNames(tb.tunes[t]).toString();
+				// document.getElementById('tunestring').textContent=tb.tunes[t].title+'\n\n.pure='+tb.tunes[t].pure+'\n'+'startPos = '+tb.tunes[t].startPos;
+				// document.getElementById('ts2').textContent=tb.tunes[t].title+'\n\n.abc='+tb.tunes[t].abc;
 				// document.getElementById('tunestring').textContent=tb.tunes[1].abc;
-				ABCJS.renderAbc("T0", tb.tunes[t].abc);
+				// ABCJS.renderAbc("T0", tb.tunes[t].abc);
+
+				var clatt, xline;
+				tb.tunes.forEach(function(tx, i, x) {
+					// build Contents
+					// console.log(tx.id+' '+tx.title);
+					idstr = 'X_'+tx.id; // id string for this tune
+					cz.appendChild(document.createTextNode(tx.id+' '));
+					a = document.createElement('a');
+					a.innerText = tx.title;
+					a.setAttribute("href", '#'+idstr);
+					cz.appendChild(a)
+					cz.appendChild(document.createElement('br'));
+					lines = tx.abc.split('\n')
+					titles = lines.filter(function(x){return x.startsWith('T:')}).map(function(x){return x.slice(2).trim()});
+					// console.log("titles = "+titles.toString())
+					n = document.createElement("div");
+					// clatt = document.createAttribute("id"); // create a id attribute
+					// clatt.value = idstr;
+					// n.setAttributeNode(clatt);
+					n.setAttribute("id", idstr);
+					px.append(n); // insert the <div=idstr> node
+					ABCJS.renderAbc(idstr, tx.pure); // render the tune
+				});
 				// document.getElementById('output').textContent=fr.result;
 			}
 		                  

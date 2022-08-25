@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<meta charset="utf-8">
-	<head>
-		    <title>Read Text File</title>
-		    <script src="../js/abcjs-basic-min.js" type="text/javascript"></script>
-	</head>
-	  
-	<body>
-		<input type="file" name="inputfile" id="inputfile" accept=".abc"> <br>
-
-		<div id="contents"><h1>Contents</h1><p></p></div>
-		<div id="titles"><h1>Title Index</h1><p></p></div>
-			          
-		<script type="text/javascript">
-			document.getElementById('inputfile')
-            	.addEventListener('change', function() {
-		                  
-		    var fr=new FileReader(), tb=null;
-		    fr.onload=function(){
-				var t = 2;
+<meta charset="utf-8">
+<head>
+	<title>ABC Library</title>
+	<script src="../js/abcjs-basic-min.js" type="text/javascript"></script>
+	<style type="text/css">
+		.col3 { column-count: 3 }
+		.header { 
+			position: fixed;
+			top:0;
+			left:0;
+			width: 100%;
+		}
+		.nav {
+			margin: 0px auto;
+			background-color: lightgreen;
+			width: 25%; /* need < 100% width to avoid filling the whole horizontal space */
+			text-align: center;
+		}
+		.navbutton { margin: 2px 20px; }
+		.pb { page-break-after: always; }
+		@media print{
+			body{margin:0;padding:0;border:0}
+			.nop{display:none}
+			.pb { page-break-after: always; }
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<button class="navbutton" onclick="window.location.href='#cbx';">Contents</button>
+			<button class="navbutton" onclick="window.location.href='#tbx';">Title Index</button>
+		</div>
+	</div>
+	<div style="margin-top: 50px;"><input type="file" name="inputfile" id="inputfile" accept=".abc"> </div>
+	<div class="pb" id="cbx"><h1>Contents</h1><div id="contents" class="col3"><p></p></div></div>
+	<div class="pb" id="tbx"><h1>Title Index</h1><div id="titles" class="col3"><p></p></div><div>					
+	<script type="text/javascript">
+		document.getElementById('inputfile').addEventListener('change', function() {				
+			var fr=new FileReader();
+			fr.onload=function(){
+				var t = 2, tb= new ABCJS.TuneBook(fr.result);
 				var x = document.getElementById('titles');
-				var px = x.parentNode; // container for the Tune divs
-				var cz = document.getElementById('contents').lastChild;
-				var tz = document.getElementById('titles').lastChild;
-				tb = new ABCJS.TuneBook(fr.result);
-
-
+				var px = x.parentNode, tz = x.lastChild; // containers for the Tune divs and title index
+				var cz = document.getElementById('contents').lastChild; // contents container
 				var tzs = []; // array for title index
 				tb.tunes.forEach(function(tx) {
 					// build Contents
-					// console.log(tx.id+' '+tx.title);
 					idstr = 'X_'+tx.id; // id string for this tune
 					cz.appendChild(document.createTextNode(tx.id+'. '));
 					a = document.createElement('a'); // links to tune
@@ -62,11 +80,9 @@
 					tz.appendChild(a)
 					tz.appendChild(document.createElement('br'));
 				});
-			}
-		                  
-		    fr.readAsText(this.files[0]);
-		    })
-    	</script>
-	</body>
-	  
+			}						
+			fr.readAsText(this.files[0]);
+		});
+	</script>
+</body>	  
 </html>

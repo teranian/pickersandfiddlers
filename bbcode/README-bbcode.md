@@ -29,4 +29,24 @@ The second version of the code is addindex2.py It needs a working version of abc
 
 The command is runtunes-oldtime.sh - a UNIX/Linux (or Windows WSL) style shell script. It expects the ABC file as it's argument.
 
+## test code
 
+The file template.htm is HTML and Javascript that loads an ABC library and displays tunes. It uses abc2svg to display the tunes.
+I'm not sure how this is meant to work. The header bit is a bit of a mess.
+This version uses the internet to load abc2web-1.js
+If you want to use it stand alone (no WiFi/internet) then you need to make it work locally.
+create a ../js folder/directory and copy (wget?) the following files:
+    http://moinejf.free.fr/js/abcweb-1.js
+    http://moinejf.free.fr/js/snd-1.js
+    http://moinejf.free.fr/js/follow-1.js
+    http://moinejf.free.fr/js/abc2svg-1.js
+
+Then get the HTML template to load the local versions.
+
+If you only want music (no playback), omit the snd-1.js and follow-1.js files. It would be good to make these options at load time.
+Also, it would be good to allow chord chart selection, instead of dots, at load time (abc2svg has %%grid and %%grid2 features to do this).
+
+The ABCJS version is template-abcjs.htm - to use it, create a folder/directory call 'js' next to the one containing template.htm 
+Download the current version of abcjs-basic-min.js into it. Then use a browser to open template.htm
+
+Click the Browse button and it will let you choose an ABC file.

@@ -3,7 +3,11 @@
 <meta charset="utf-8">
 <head>
 	<title>ABC Library</title>
-	<script src="../js/abcjs-basic-min.js" type="text/javascript"></script>
+	<script src="http://moinejf.free.fr/js/abcweb-1.js"></script>
+	<script src="http://moinejf.free.fr/js/snd-1.js"></script>
+	<script src="http://moinejf.free.fr/js/follow-1.js"></script>
+	<!--script src="../js/abcweb-1.js"></script-->
+	<!--script src="../js/snd-1.js"></script-->
 	<style type="text/css">
 		.col3 { column-count: 3 }
 		.header { 
@@ -20,6 +24,7 @@
 		}
 		.navbutton { margin: 2px 20px; }
 		.pb { page-break-after: always; }
+		#contents>p, #titles>p {margin-block-start: 0;}
 		@media print{
 			body{margin:0;padding:0;border:0}
 			.nop{display:none}
@@ -35,52 +40,102 @@
 		</div>
 	</div>
 	<div style="margin-top: 50px;"><input type="file" name="inputfile" id="inputfile" accept=".abc"> </div>
-	<div class="pb" id="cbx"><h1>Contents</h1><div id="contents" class="col3"><p></p></div></div>
-	<div class="pb" id="tbx"><h1>Title Index</h1><div id="titles" class="col3"><p></p></div><div>					
+	<div class="pb" id="cbx"><h1 class="idxh">Contents</h1><div id="contents" class="col3"><p style="margin-block-start: 0;"></p></div></div>
+	<div class="pb" id="tbx"><h1 class="idxh">Title Index</h1><div id="titles" class="col3"><p></p></div></div>	
+	<!-- following has lots of settings - these don't seem to change properly
+	if I don't do it this way! I'm not sure why that is. -->
+	<div id="abc2svg"><script class="abc" type="text/vnd.abc">%abc-2.2
+%%font Georgia
+%%titlefont Georgia-Bold 14
+%%subtitlefont Georgia-Italic 12
+%%partsfont Georgia 12
+%%tempofont Georgia 12
+%%gchordfont Georgia 16
+%%infofont Georgia
+%%textfont Courier
+%%setfont-1 Georgia 12
+%%setfont-2 Georgia-Italic 12
+%%setfont-3 Courier 12
+%%setfont-4 Georgia-Bold 12
+%%vocalfont Georgia 12
+%%wordsfont Georgia 12
+%%composerfont Georgia 11
+%%annotationsfont Courier 11
+%%writefields XH
+%%writefields P no
+%%historyfont Georgia-Italic 11
+%%MIDI gchordon
+% 41 violin 42 viola 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
+%%MIDI program 41
+</script></div>				
 	<script type="text/javascript">
+		var fr=new FileReader(), mdiv = document.getElementById("abc2svg");
+		fr.onerror = function() {
+          alert(fileReader.error);
+        }; 
 		document.getElementById('inputfile').addEventListener('change', function() {				
-			var fr=new FileReader();
+			
 			fr.onload=function(){
-				var t = 2, tb= new ABCJS.TuneBook(fr.result);
-				var x = document.getElementById('titles');
-				var px = x.parentNode, tz = x.lastChild; // containers for the Tune divs and title index
-				var cz = document.getElementById('contents').lastChild; // contents container
-				var tzs = []; // array for title index
-				tb.tunes.forEach(function(tx) {
-					// build Contents
-					idstr = 'X_'+tx.id; // id string for this tune
-					cz.appendChild(document.createTextNode(tx.id+'. '));
-					a = document.createElement('a'); // links to tune
-					a.innerText = tx.title;
-					a.setAttribute("href", '#'+idstr);
-					cz.appendChild(a)
-					cz.appendChild(document.createElement('br'));
-					lines = tx.abc.split('\n') // should stop after K: line
-					// get all the titles in the tune
-					titles = lines.filter(function(x){return x.startsWith('T:')}).map(function(x){return x.slice(2).trim()});
-					// collect multiple titles for title index - should also find key
-					tzs = tzs.concat(titles.map(function(x){ return {'id': tx.id, 'title': x}}));
-
-					// create a <div> element for this tune
-					n = document.createElement("div");
-					n.setAttribute("id", idstr);
-					px.append(n); // insert the <div=idstr> node
-					ABCJS.renderAbc(idstr, tx.pure); // render the tune
+				var abcs = fr.result, ndiv, pos;
+				var cidxp = document.getElementById("contents").lastChild; // should be empty <p>
+				var tidxp = document.getElementById("titles").lastChild; // should be empty <p>
+				// console.log("abcs = '" + abcs.slice(0, 1000).replace(/%%/g, '%%%')) + "'---"; // console.log does string substitutions
+				var ixs = [0], tixs = [];
+				// find all the starts of tunes
+				var pat = /^X:/gm;
+				while (pos=pat.exec(abcs)) { ixs.push(pos.index); }
+				// console.log(""+ixs.length+" tunes found.")
+				//console.log("X: indices = " + ixs.toString());
+				const ntunes = ixs.length;
+				ixs.push(abcs.length);
+				abc2svg.music[0].t = abcs.slice(0, ixs[1]).trim()+"\n\n"; //.set_music seems to not work
+				// insert the new music, and build the Contents
+				for(var i=1; i<ntunes; i++) {
+					while(abc2svg.music.length <= i) {
+						ndiv = document.createElement("div");	// new <div> for this tune
+						mdiv.appendChild(ndiv);					// insert <div>
+						abc2svg.music.push({n:'mus'+abc2svg.music.length,t:'',d:ndiv}); // add new nodes when needed
+					}
+					ndiv = abc2svg.music[i].d;
+					var txt = abcs.slice(ixs[i], ixs[i+1]).trim()+"\n\n";	// get the ABC for the tune
+					abc2svg.set_music(ndiv, txt);
+					// set the tune in the music
+					var xno = txt.slice(2, txt.indexOf('\n')).trim(), tid = 'X'+xno;	// get the tune tid from the X: line (first line)
+					ndiv.setAttribute("id", tid);			// set the id attribute for the tune's <div> - not for 0th
+					// create Title Index entries ...
+					var cixs = [], cpos = tixs.length; 
+					var tpat = /^T:/gm;
+					while (pos = tpat.exec(txt)) {
+						tpos = pos.index; 
+						cixs.push(tpos);
+						// may need to fix leading 'The ', 'A ' or 'An '
+						tixs.push({xno: xno, tl: txt.slice(tpos+2, txt.indexOf('\n', tpos+2)).trim()});
+					}
+					// create Contents entry
+					var tl = tixs[cpos].tl;
+					// var tl = txt.slice(cixs[0]+2, txt.indexOf('\n', cixs[0])).trim();
+					console.log("add title - "+tl);
+					cidxp.appendChild(document.createTextNode(xno+'. '));
+					var a = document.createElement('a');
+					a.setAttribute("href", '#'+tid);
+					a.innerText = tl;
+					cidxp.appendChild(a);
+					cidxp.appendChild(document.createElement('br'));
+				}
+				// output title index from tixs at this point
+				// sort titles for title index
+				tixs.sort(function(a,b){ return a.tl.localeCompare(b.tl); });
+				// insert titles into title index
+				tixs.forEach(function(t) {
+					tidxp.appendChild(document.createTextNode(t.xno+'. '));
+					var a = document.createElement('a');
+					a.setAttribute("href", '#X'+t.xno);
+					a.innerText = t.tl;
+					tidxp.appendChild(a);
+					tidxp.appendChild(document.createElement('br'));
 				});
-
-				// sort titles - should also order by .id as secondary key
-				tzs.sort(function(x,y){ return (x.title<y.title)?-1:1 });
-
-				// fill in the Title Index
-				tzs.forEach(function(tx){
-					tz.appendChild(document.createTextNode(tx.id+'. '));
-					a = document.createElement('a');
-					a.innerText = tx.title;
-					a.setAttribute("href", '#X_'+tx.id);
-					tz.appendChild(a)
-					tz.appendChild(document.createElement('br'));
-				});
-			}						
+				return;
+			};
 			fr.readAsText(this.files[0]);
 		});
 	</script>

@@ -1,6 +1,6 @@
 ---
 title: Yearlings in the Canebrake
-source: Foghorn String Band
+source: https://youtu.be/Bq7dbwUbSMc?t=94
 youtube: https://www.youtube.com/embed/Bq7dbwUbSMc
 date: 2022-08-17T23:05:06.323Z
 abc: >-
@@ -44,8 +44,10 @@ key: A
 tags:
   - Tunes in A
 ---
-Foghorn String Band: \
+Foghorn String Band:
+
 https://youtu.be/Bq7dbwUbSMc?t=94
 
-Pine Tree String Band:\
+Pine Tree String Band:
+
 https://www.youtube.com/watch?v=vt3nAHeMpmI

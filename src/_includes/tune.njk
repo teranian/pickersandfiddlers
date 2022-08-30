@@ -20,6 +20,12 @@ prism: true
 
     <div class="mx-auto max-w-3xl content-center">
 
+        {% if content %}
+            <div class="w-full">
+            {{ content | safe }}
+            </div>
+        {% endif %} 
+        
         {% if abc %}
 
             <div id="paper" class="my-2"></div>
@@ -34,13 +40,8 @@ prism: true
                 <div id="warnings" class="my-2 text-center"></div>
             </div>
         {% endif %}
-{# 
-        {% if content %}
-            <div class="prose lg:prose-xl my-4 mx-auto">
-        Content
-        {{ content | safe }}
-            </div>
-        {% endif %} #}
+
+
 
     </div>
 </div>

@@ -1,6 +1,7 @@
 ---
 title: Arkansas Traveller
 date: 2022-08-15T04:33:21.691Z
+source: https://abcnotation.com/tunePage?a=banjolin.co.uk/tunes/abcs/arkansastraveller/0000
 abc: |-
   X:302
   T:Arkansas Traveler
@@ -19,4 +20,3 @@ tags:
   - Tune
   - Tunes in D
 ---
-https://abcnotation.com/tunePage?a=banjolin.co.uk/tunes/abcs/arkansastraveller/0000

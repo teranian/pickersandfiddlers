@@ -1,6 +1,7 @@
 ---
 title: Yearlings in the Canebrake
 source: Foghorn String Band https://youtu.be/Bq7dbwUbSMc?t=94
+youtube: https://www.youtube.com/embed/Bq7dbwUbSMc
 date: 2022-08-17T23:05:06.323Z
 abc: >-
   

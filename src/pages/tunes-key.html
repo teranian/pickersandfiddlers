@@ -20,11 +20,26 @@ permalink: /tunes/bykey/
         {% endfor %}
     </div>
 
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in AEAE</h2>
+        <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in Am</h2>
     <div class="columns-2">
         {% set tunelist = collections.tunes %}
         {% for tunes in tunelist %}
-            {% if tunes.data.key == "AEAE" %}
+            {% if tunes.data.key == "Am" %}
+                <p class=" text-2xl text-gray-900 mb-3">
+                    <a href="{{ tunes.url | url }}">
+                        {{ tunes.data.title }}
+                        <span>({{ tunes.data.key }})</span>
+                    </a>
+                </p>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in AEAC#</h2>
+    <div class="columns-2">
+        {% set tunelist = collections.tunes %}
+        {% for tunes in tunelist %}
+            {% if tunes.data.key == "AEAC#" %}
                 <p class=" text-2xl text-gray-900 mb-3">
                     <a href="{{ tunes.url | url }}">
                         {{ tunes.data.title }}
@@ -35,11 +50,11 @@ permalink: /tunes/bykey/
         {% endfor %}
     </div>
 
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in Am</h2>
+    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in AEAE</h2>
     <div class="columns-2">
         {% set tunelist = collections.tunes %}
         {% for tunes in tunelist %}
-            {% if tunes.data.key == "Am" %}
+            {% if tunes.data.key == "AEAE" %}
                 <p class=" text-2xl text-gray-900 mb-3">
                     <a href="{{ tunes.url | url }}">
                         {{ tunes.data.title }}

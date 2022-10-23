@@ -48,8 +48,8 @@ abc: >-
   |:FA2B A2A2|FAAc BAFE|
 
   FA2B A2A2|FGAc BAFE|FA2B cABc|AcBG A2E2:|]
-key: A
+key: AEAC#
 tags:
-  - Tunes in A
+  - Tunes in AEAC#
 ---
 https://www.youtube.com/watch?v=3WIYaweO50o

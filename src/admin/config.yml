@@ -32,7 +32,7 @@ collections:
         name: "key"
         multiple: false
         create: true
-        options: ["A", "AEAE", "Am", "C", "D", "DDAD", "Em", "G"]
+        options: ["A", "AEAE", "AEAC#", "Am", "C", "D", "DDAD", "Em", "G"]
       - widget: select
         label: "tags"
         name: "tags"

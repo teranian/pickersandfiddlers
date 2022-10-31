@@ -21,4 +21,4 @@ tags:
   - Tunes in C
 ---
 https://www.youtube.com/watch?v=iyAtuF_4bu4\
-Tune starts at around 35 seconds into the youtuve clip.
+Tune starts at around 35 seconds into the youtube clip.

@@ -38,7 +38,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tune", "Tunes in A", "Tunes in AEAE", "Tunes in Am", "Tunes in C", "Tunes in D", "Tunes in DDAD", "Tunes in Em", "Tunes in G"]
+        options: ["Tune", "Tunes in A", "Tunes in AEAE", "Tunes in AEAC#", "Tunes in Am", "Tunes in C", "Tunes in D", "Tunes in DDAD", "Tunes in Em", "Tunes in G"]
 
   - label: "Settings"
     name: "settings"

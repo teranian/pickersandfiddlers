@@ -1,5 +1,6 @@
 ---
 title: Wes Muir's tune
+description: Tune starts about 35 seconds into the video clip
 composer: Nile Wilson
 date: 2022-10-31T05:27:09.490Z
 abc: |-

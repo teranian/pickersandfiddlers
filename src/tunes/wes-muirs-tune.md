@@ -1,6 +1,6 @@
 ---
 title: Wes Muir's tune
-description: Tune starts about 35 seconds into the video clip
+description: ""
 composer: Nile Wilson
 date: 2022-10-31T05:27:09.490Z
 abc: |-
@@ -22,3 +22,5 @@ tags:
   - Tunes in C
 ---
 https://www.youtube.com/watch?v=iyAtuF_4bu4
+
+Tune starts about 35 seconds into the video clip

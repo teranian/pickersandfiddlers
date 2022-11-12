@@ -36,6 +36,7 @@ abc: >-
   FDFD B2A2|D6 :|
 key: DDAD
 tags:
+  - Tunes in D
   - Tunes in DDAD
 ---
 https://www.youtube.com/watch?v=6VY0RqlaCXw

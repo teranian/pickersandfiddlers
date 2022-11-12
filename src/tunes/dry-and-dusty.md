@@ -15,5 +15,8 @@ abc: |-
 key: D
 tags:
   - Tunes in D
+  - Tunes in DDAD
 ---
 https://www.youtube.com/watch?v=wu3vn98zCGc
+
+T﻿he comment needs to be on a separate line.

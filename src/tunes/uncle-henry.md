@@ -39,3 +39,5 @@ tags:
   - Tunes in DDAD
 ---
 https://www.youtube.com/watch?v=6VY0RqlaCXw
+
+Played at the session as played by Erynn Marshall, in a medley with Rusty gun

@@ -18,4 +18,4 @@ key: AEAE
 tags:
   - Tunes in AEAE
 ---
-[chords added by Thomas from chord book 16/11/22](https://abcnotation.com/tunePage?a=thesession.org/tunes/14037.no-ext/0001)
+[](https://abcnotation.com/tunePage?a=thesession.org/tunes/14037.no-ext/0001)

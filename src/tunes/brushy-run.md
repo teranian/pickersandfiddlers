@@ -13,10 +13,10 @@ abc: |-
   D:https://www.slippery-hill.com/recording/brushy-run-0
   Z:Transcibed by Andrew Kuntz
   K:G
-  BABc d2d2|edef g2g2|BABc d2de|AABG E2D2|
-  BABc d2d2|edef gage|BGAG  (3EFE D2| GBAF G2G2:|
-  |:+slide+BAGD E2D2|efgd e-fgd|+slide+BAGD EDE-F|GBAF G2G(_B|
-  =B)AGD E2D2|efgd e-fgd|+slide+BAGD EDE-F|GBAF G2G2:|
+  "G"BABc d2d2|"C"edef g2g2|"G"BABc d2de|"D"AABG E2D2|
+  "G"BABc d2d2|"C"edef gage|"G"BGAG  (3EFE D2| "D"GBAF "G"G2G2:|
+  |:+slide+"G"BAGD E2D2|"C"efgd e-fgd|+slide+"G"BAGD EDE-F|"D"GBAF G2G(_B|
+  "G"=B)AGD E2D2|"C"efgd e-fgd|+slide+"G"BAGD EDE-F|"D"GBAF "G"G2G2:|
 key: G
 tags:
   - Tunes in G

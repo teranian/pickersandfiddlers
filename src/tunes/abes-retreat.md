@@ -10,9 +10,9 @@ abc: |-
   L: 1/8
   Q: 160
   K: Amix
-  "A"A2cB ABcd|efgf e2 A2-|-ABAG EBBA|GEFD ~E3G|
-  "A"A2cB ABcd|"G"efgf efgz|"E"aba2 gfed|1 "E"cAAG A2EG:|2 "E"cAAG A2ce||
-  ~a3g ~e3f|gefd efge|a2ag ~e3f|gefd efge|
+  "A"A2cB ABcd|efgf e2 A2-|-"A"ABAG "G"EBBA|"E"GEFD ~E3G|
+  "A"A2cB ABcd|efgf efgz|"A"aba2 "G"gfed|1 "A"cAAG A2EG:|2 "A"cAAG A2ce||
+  ~"A"a3g ~e3f|gefd efge|"A"a2ag ~e3f|gefd efge|
   az a3 gef|gefd efge|aba2 gfed|1 cAAG A2ce:|2 cAAG A2cB||
 key: AEAE
 tags:

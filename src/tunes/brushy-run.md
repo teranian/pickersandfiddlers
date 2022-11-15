@@ -1,6 +1,6 @@
 ---
 title: Brushy Run
-source: https://youtu.be/EKA8yTAO7YI
+source: ""
 date: 2022-11-15T05:47:09.754Z
 abc: |-
   X:1
@@ -21,3 +21,4 @@ key: G
 tags:
   - Tunes in G
 ---
+https://youtu.be/EKA8yTAO7YI

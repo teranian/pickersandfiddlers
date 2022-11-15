@@ -13,7 +13,7 @@ abc: |-
   "A"A2cB ABcd|efgf e2 A2-|-"A"ABAG "G"EBBA|"E"GEFD ~E3G|
   "A"A2cB ABcd|efgf efgz|"A"aba2 "G"gfed|1 "A"cAAG A2EG:|2 "A"cAAG A2ce||
   ~"A"a3g ~e3f|"G"gefd efge|"A"a2ag ~"G"e3f|"E"gefd efge|
-  "A"az a3 gef|"G"gefd efge|"A"aba2 gfed|1 "A"cAAG "G"A2ce:|2 "A"cAAG A2cB||
+  "A"az a3 gef|"G"gefd efge|"A"aba2 "G"gfed|1 "A"cAAG A2ce:|2 "A"cAAG A2cB||
 key: AEAE
 tags:
   - Tunes in AEAE

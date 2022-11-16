@@ -9,7 +9,7 @@ abc: |-
   M:C|
   L:1/8
   R:Ree
-  Q:1/4=120
+  Q:1/2=120
   D:Rounder 1131/1132, Ed Haley - "Forked Deer" (1997)
   D:https://www.slippery-hill.com/recording/brushy-run-0
   Z:Transcibed by Andrew Kuntz

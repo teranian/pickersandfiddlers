@@ -7,8 +7,8 @@ abc: |-
   L:1/8
   M:C|
   K:A
-  (3efg|a2 g2 afea|fedf ecBA|B2 G2 B2 G2|ABcd efge|
-  a2 g2 afea|fedf ecBc|ABcd efed|cABc A2:|
+  (3efg|"A"a2 g2 afea|"D"fedf "A"ecBA|"E"B2 G2 B2 G2|"A"ABcd efge|
+  "A"a2 g2 afea|"D"fedf "A"ecBc|"A"ABcd efed|"E"cABc "A"A2:|
   |:cB|ABcd efed|cABc B2 cB|ABcd efed|cA B2 A2:|
   |:EF|A2 AA AcBA|F2 FF F2 EF|A2 AA ABcd|e2 ef e2 c2|
   B2 BB BcBA|F2 FF F2 EF|A2 ae faed|cABc A2:||

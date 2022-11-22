@@ -9,10 +9,10 @@ abc: |-
   L:1/4
   Q: 180
   K:G
-   B3/2 A/2 B| G2 A| G- F E| D3|
-   B3/2 A/2 B| G2 E| F- A2-| A2 z|
-   B3/2 A/2 B|\ G2 G| G- F E| D2 D/2D/2|
-   D G G/2G/2| F- G A| G3-| G2 z|
+   "D"B3/2 A/2 B| "D7"G2 A| "G"G- F E| "D"D3|
+   "D"B3/2 A/2 B| G2 E| "A7"F- A2-| A2 z|
+   "D"B3/2 A/2 B|\ "D7"G2 G| "A7"G- F E| D2 D/2D/2|
+   "D"D G G/2G/2| "A7"F- G A| "D"G3-| G2 z|
 key: G
 tags:
   - Tunes in G

@@ -20,9 +20,9 @@ abc: >-
 
   K:Am
 
-  |:a2 ab age^f|g2 ga g^fed|e2e2e2e2|edc2 A2AB|
+  |:"A"a2 ab age^f|"G"g2 ga g^fed|"A"e2e2e2e2|edc2 A2AB|
 
-  [E2c2] cd cBAc|BABc BAGE|(A4 A)GEG|[1 AGAB cdeg:|2 [E8A8]||
+  [E2c2] "A"cd cBAc|"E"BABc BAGE|(A4 A)"A"GEG|[1 AGAB cdeg:|2 [E8A8]||
 
   |:[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|
 
@@ -31,4 +31,3 @@ key: A
 tags:
   - Tunes in A
 ---
-

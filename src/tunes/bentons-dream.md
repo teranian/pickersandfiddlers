@@ -22,11 +22,11 @@ abc: >-
 
   |:"A"a2 ab age^f|"G"g2 ga g^fed|"A"e2e2e2e2|edc2 A2AB|
 
-  [E2c2] "A"cd cBAc|"E"BABc BAGE|(A4 A)"A"GEG|[1 AGAB cdeg:|2 [E8A8]||
+  [E2c2] "A"cd cBAc|"E"BABc BAGE|"A"(A4 A)GEG|[1 AGAB cdeg:|2 [E8A8]||
 
-  |:[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|
+  |:"G"[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|"A"[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|"E"[G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|
 
-  [G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|A8|e2e2 edc2|(A4 A)GEG|A8:||
+  [G,2G2] [G,G][G,G] [G,2G2] [G,G][G,G]|"A"A8|e2e2 edc2|(A4 A)GEG|A8:||
 key: A
 tags:
   - Tunes in A

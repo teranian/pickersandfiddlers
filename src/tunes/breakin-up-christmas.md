@@ -31,11 +31,11 @@ abc: >-
 
   K:A
 
-  +slide+[e2e2]-|[ee]fed c-dee|ef-ec A2 +slide+[e2e22]-|[ee]fed cAcA|B-AB-c A2+slide+[e2e2]-|
+  +slide+[e2e2]-|"A"[ee]fed c-dee|ef-ec A2 +slide+[e2e22]-|"A"[ee]fed cAcA|"E7"B-AB-c "A"A2+slide+[e2e2]-|
 
-  [ee]fed c-dee|1ef-ec A2 ^g2-|aeae =g2fg |ecB-c A2:|
+  "A"[ee]fed c-dee|1ef-ec A2 ^g2-|aeae =g2fg |"E7"ecB-c "A"A2:|
 
-  |2e(fe)cA2a2-|a2a2-c'3f|ec-BA A2||
+  |2"A"e(fe)cA2a2-|a2a2-c'3f|"E7"ec-BA "A"A2||
 
   |:[A,2E2]-|[A,E][FA]-[A2A2] [A3A3] A|AcBA FE[FA]A|EF[A2A2] [A3A3]A|AcBA A2:||
 

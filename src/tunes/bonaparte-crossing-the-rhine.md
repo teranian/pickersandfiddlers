@@ -9,10 +9,10 @@ abc: |-
   R:March
   Z:AK/Fiddler's Companion
   K:D
-  FG | A>B AF A2 de | f>e fa d2 dc | BcdB AFDF | E2 E>F E2 FG | 
-  A>B AF A2 de | f>e fa d2 dc | BcdB AFEF | D2 DE D2 :: de |
-  f>e fg a2 dc | B>A Bc d2 AA | B>c dB AFDF | E2 E>F E2 FG | 
-  A>B AF A2 de |fefa d2 dc | B>c dB AFEF | D2 DE D2 :||
+  FG | "D"A>B AF A2 de | f>e fa d2 dc | "G"BcdB "D"AFDF | "A7"E2 E>F E2 FG | 
+  "D"A>B AF A2 de | f>e fa d2 dc | "G"BcdB "D"AF"A"EF | "D"D2 DE D2 :: de |
+  "D"f>e fg a2 dc | "G"B>A Bc "D"d2 AA | "G"B>c dB "D"AFDF | "A7"E2 E>F E2 FG | 
+  "D"A>B AF A2 de |fefa d2 dc | "G"B>c dB "D"AF"A"EF | "D"D2 DE D2 :||
 key: D
 tags:
   - Tunes in D

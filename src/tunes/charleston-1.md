@@ -21,20 +21,20 @@ abc: >-
   F:https://www.slippery-hill.com/recording/charleston-1
 
   Z:Transcribed by Andrew Kuntz
-  
+
   Q:220
 
   K:C
 
-  cd|ecGE CDEF|GAcA a2g2|c'age aged|edcA c2c2|
+  cd|"C"ecGE CDEF|"C"GAcA a2g2|"C"c'age aged|"G"edcA "C"c2c2|
 
-  ecGE CDEF|GAcA a2g2|c'age aged|edcA c2c2||
+  "C"ecGE CDEF|"C"GAcA a2g2|"C"c'age aged|"G"edcA "C"c2c2||
 
-  +slide+[e4e4][e4e4]|[M:2/4][e2e2]a2|[M:C|] gedc AGED |EA2B A2G2 |ECDC A,C3|
+  +slide+"C"[e4e4][e4e4]|[M:2/4]"C"[e2e2]a2|[M:C|] "C"gedc "Am"AGED |"Am"EA2B "C"A2G2 |"C"ECDC A,C3|
 
-  +slide+[C_E]-[C3=E3] C4|+slide+[C_E]-[C3=E3] DCA,B,|C2c2 AGED|ECDC A,C3|
+  +slide+"C"[C_E]-[C3=E3] C4|+slide+"C"[C_E]-[C3=E3] DCA,B,|"C"C2c2 "G"AGED|"C"ECDC A,C3|
 
-  +slide+[C_E]-[C3=E3]C4|+slide+[C_E]-[C3=E3] DCA,B,|C2c2 AGED|[M:6/4]ECDC A,C3 C2||
+  +slide+"C"[C_E]-[C3=E3]C4|+slide+"C"[C_E]-[C3=E3] DCA,B,|"C"C2c2 "G"AGED|[M:6/4]"C"ECDC A,C3 C2||
 key: C
 tags:
   - Tunes in C

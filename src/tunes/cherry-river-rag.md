@@ -19,7 +19,7 @@ abc: >-
   L:1/8
 
   Q:"Fast"
-  
+
   Q:260
 
   R:Country Rag
@@ -32,17 +32,17 @@ abc: >-
 
   K:C
 
-  ((3ega|c')eae c'eae|eeag e2cd|eAdA dAcA|ed-dc Aedc|
+  ((3ega|"A"c')eae c'eae|eeag e2cd|"D"eAdA dAcA|ed-dc Aedc|
 
-  GAGA c2 cd|edeg aged-|ed-cA cdcd|edcA c2c2|
+  "A"GAGA c2 cd|edeg aged-|"E"ed-cA cdcd|edcA "A"c2c2|
 
-  c'eae c'eae|c'eag edcd|eAdA eAdA|ed-dc AdcA|
+  "A"c'eae c'eae|c'eag edcd|"D"eAdA eAdA|ed-dc AdcA|
 
-  GcAA Gc-cd|eg-ge aged-|ed-cA cd3|c6||
+  "A"GcAA Gc-cd|eg-ge aged-|"E"ed-cA cd3|"A"c6||
 
-  E2|:CDCD EGAB|cdeg aged|c2 c(A BA)GA|cAGd- dcAE|
+  E2|:"A"CDCD EGAB|cdeg aged|"E"c2 c(A BA)GA|cAGd- dcAE|
 
-  C2 CD EGAB|cdeg aged-|edcA cdec|dcA[Ec]- [Ec]d [E2c2]:|
+  "A"C2 CD EGAB|cdeg aged-|"E"edcA cdec|[1 "E"dcA[Ec]- "A"[Ec]d [E2c2]:|2  "A"dcA[Ec]- [Ec]d [E2c2]|
 key: C
 tags:
   - Tunes in C

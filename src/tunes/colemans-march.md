@@ -24,11 +24,11 @@ abc: >-
 
   A/B/ A/G/ | "D"F2 F E/2F/2 | "G"G>F E/F/ G | "D"A A/B/ A/G/ F/D/ | "A"E>F E F/G/ |
 
-  "D"A d "A"c d | "G"B/c/ B/A/ "D"F/E/ D/F/ | "Em"E E/F/ "A"G/F/ E | "D"D2 :|
+  "D"A d "A"c d | "G"B/c/ B/A/ "D"F/E/ D/F/ | "Em"E E/F/ "D"G/F/ E | "D"D2 :|
 
-  |:"D"D/F/ (3A/B/c/ | "A"d2 d2 | "G"c>d c/B/ A | "D"B B/c/ d/c/ B| "D"A>B "A"A/G/ F/G/ |
+  |:D/F/ (3A/B/c/ | "D"d2 d2 | "A"c>d c/B/ A | "G"B B/c/ d/c/ B| "D"A>B A/G/ F/G/ |
 
-  "G"A d "D"c d | "Em"B/c/ B/A/ "A"F/E/ D/F/ | "D"E E/F/ G/F/ E | D2 :||
+  "D"A d "A"c d | "G"B/c/ B/A/ "D"F/E/ D/F/ | "Em"E E/F/ "A"G/F/ E | "D"D2 :||
 key: D
 tags:
   - Tunes in D

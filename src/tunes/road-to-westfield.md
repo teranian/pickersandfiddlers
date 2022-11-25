@@ -31,13 +31,13 @@ abc: >-
 
   K:A
 
-  EDCE [A2A2][EA]-[AA]-|[AA]BAG [CE]GAB|cBAc ecAc|BA[FA]B  (3cBc [E2A2]-|
+  "A"EDCE [A2A2][EA]-[AA]-|"D"[AA]BAG "A"[CE]""GAB|cBAc ecAc|"E"BA[FA]B  (3"A"cBc [E2A2]-|
 
-  [EA]DCE [A2A2][EA]-[AA]-|[AA]BAG [CE]GAB|cBAc ecAc|1BA[FA][EA] ((3[Ec]Bc)  [E2A2]:|2BA[EA]-[FA]  [A4A4]:|
+  "A"[EA]DCE [A2A2][EA]-[AA]-|"D"[AA]BAG "A"[CE]""GAB|cBAc ecAc|1"E"BA[FA][EA] ((3"A"[Ec]Bc)  [E2A2]:|2"E"BA[EA]-[FA]  "A"[A4A4]:|
 
-  |:A,2 a2 (3faf ed|{B}cBAG (3FGF [EA][FA]|[A2A2][AA](B cA)BA|[ce]-[ee][e2e2] [e4e4]|
+  |:"A"A,2 ""a2 (3"D"faf ed|{B}"A"cBAG (3"E"FGF [EA][FA]|"A"[A2A2][AA](B cA)BA|"E"[ce]-[ee][e2e2] [e4e4]|
 
-  A,2 a2 (3faf ed|{B}cBAG (3FGF [EA][FA]|[A2A2][AA](B cA)BA|[FA]-[AA] [A2A2][A4A4]:|
+  "A"A,2 a2 (3"D"faf ed|{B}"A"cBAG (3"E"FGF [EA][FA]|"A"[A2A2][AA](B cA)BA|"E"[FA]-[AA] [A2A2]"A"[A4A4]:|
 key: AEAE
 tags:
   - Tunes in AEAE

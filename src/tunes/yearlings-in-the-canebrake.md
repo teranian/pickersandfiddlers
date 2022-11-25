@@ -31,15 +31,15 @@ abc: >-
 
   K:Amin
 
-  |:A2A2[A,2E2][A,E][B,E]|[C2E2] [CE][CE] [A,2E2][A,E][B,E]|[C2E2][CE][CE] [CF]EDC |[G,2D2][G,D]E [G,2D2] D(^F|
+  |:"Am"A2A2[A,2E2][A,E][B,E]|[C2E2] [CE][CE] [A,2E2][A,E][B,E]|[C2E2][CE][CE] [CF]EDC |"E7"[G,2D2][G,D]E [G,2D2] D(^F|
 
-  [A2A2]) [AA]A [A,2E2][A,E][A,E]|[C2E2]  [B,E][CE] [A,2E2][A,E][B,E]|[C2E2][C2E2][CE][CE] [CF]EDC |1[G,D]D[G,D]E [G,2D2] D^F:|2[G,D]D[G,D]E [G,2D2][G,2D2]||
+  "Am"[A2A2]) [AA]A [A,2E2][A,E][A,E]|[C2E2]  [B,E][CE] [A,2E2][A,E][B,E]|[C2E2][C2E2][CE][CE] [CF]EDC |1"E7"[G,D]D[G,D]E [G,2D2] D^F:|2"E7"[G,D]D[G,D]E [G,2D2][G,2D2]||
 
   K:A
 
-  [ce]-[e2e2][ee] [e2e2][B2e2]|[Be][ce][de][de] [d2f2]  [Ae]B | de[df]g [d2f2] ed|
+  "A"[ce]-[e2e2][ee] [e2e2][B2e2]|[Be][ce][de][de] [d2f2]  [Ae]B | "D"de[df]g [d2f2] ed|
 
-  [ce]-[e2e2][ee] [e2e2] [B2e2]|[Be][ce][de][de] [d2f2]  c2A2| fefg afed|[ce][Ae][Be][ce] [A2e2]||
+  "D"[ce]-[e2e2][ee] [e2e2] [B2e2]|"A"[Be][ce][de][de] [d2f2]  c2A2| "D"fefg afed|"E7"[ce][Ae][Be][ce] "A"[A2e2]||
 key: A
 tags:
   - Tunes in A

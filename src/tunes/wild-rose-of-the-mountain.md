@@ -24,19 +24,19 @@ abc: >-
   M: C|
 
   L: 1/8
-  
+
   Q:220
 
   K: Amix
 
   (3ef^g \ 
 
-  | a2a2 gagf | efed c2(3ef^g | a2a2 gagf |[M:2/4]edc2 |[M:C|] e8- | e6 a2- |
-    a2a2 gagf | efed c2A2 | EFAB cdcB |[M:2/4] A^G3 |[M:C|] A4- | A6 :|
-  |: A,2- \
+  | "A"a2a2 gagf | efed c2(3ef^g | a2a2 gagf |[M:2/4]edc2 |[M:C|] "E"e8- | e6 a2- |
+    "A"a2a2 gagf | efed c2A2 | EFAB cdcB |[M:2/4] "E"A^G3 |[M:C|] "A"A4- | A6 :|
+  |: ""A,2- \
 
-  | A,B,CE A2AB | cdef gagf | efed cdcB |[M:2/4]AG3 |[M:C|] E8- | E6 A,2 |
-    A,B,CE A2AB | cdef gagf | efed cdcB |[M:2/4]A^G3 |[M:C|] A8- | A6 :|
+  | "A"A,B,CE A2AB | cdef gagf | efed cdcB |[M:2/4]AG3 |[M:C|] "E"E8- | E6 A,2 |
+    "A"A,B,CE A2AB | cdef gagf | efed cdcB |[M:2/4]"E"A^G3 |[M:C|] "A"A8- | A6 :|
 key: A
 tags:
   - Tunes in A

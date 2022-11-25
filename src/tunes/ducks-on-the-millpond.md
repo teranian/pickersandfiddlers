@@ -10,10 +10,10 @@ abc: |-
   N:ADae tuning
   S:Rayna Gellert
   K:D
-  [D2d2]e2f2e2|(def)d e[D(d]BA)|d2g2 ((3fgf e)(d|BA)Bd e(dBA)|
-  [D2d2]e2f2e2|(def)d e[D(d]BA)|d2g2 ((3fgf e)(d|BA)Bd ed-d2||
-  {g}a3 ([Aa]a2) (ef|a)eff e[D(d]d2)|a3 (b af)ed|(BAB)d e(dd2)|
-  {g}a3 ([Aa]a2) (ef|a)eff e[D(d]d2)|a3 (b af)ed|(BAB)d e(dBA)||
+  "D"[D2d2]e2f2e2|(def)d e[D(d]BA)|d2g2 ((3fgf e)(d|"A"BA)Bd e(dBA)|
+  "D"[D2d2]""e2f2e2|(def)d e[D(d]BA)|d2g2 ((3fgf e)(d|"A"BA)Bd "D"ed-d2||
+  "D"{g}a3 ([Aa]a2) (ef|a)eff e[D(d]d2)|a3 (b af)ed|("A"BAB)d e(dd2)|
+  {g}"D"a3 ([Aa]a2) (ef|a)eff e[D(d]d2)|a3 (b af)ed|("A"BAB)d "D"e(dBA)||
 key: D
 tags:
   - Tunes in D

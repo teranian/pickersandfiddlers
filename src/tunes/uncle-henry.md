@@ -29,11 +29,11 @@ abc: >-
 
   K:D
 
-  AB|dBdA Bd-A2|d3 E- D2AB|dBdA Bd-A2|[A3e3](f [A2e2])de|
+  AB|"D"dBdA Bd-A2|d3 E- D2AB|dBdA Bd-A2|"A"[A3e3](f [A2e2])de|
 
-  fdfd e2d2|B2d2 D4- D2|: DE|FDFD B2A2|F6DE|
+  "D"fdfd e2d2|"G"B2d2 "D"D4- D2|: "D"DE|FDFD B2A2|F6DE|
 
-  FDFD B2A2|D6 :|
+  "D"FDFD B2A2|D6 :|
 key: DDAD
 tags:
   - Tunes in D

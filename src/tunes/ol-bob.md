@@ -29,13 +29,13 @@ abc: >-
 
   K:A
 
-  +slide+[e3e3][ee] [e2e2][ce]-[ee]-|[ee]fec B2A2|[FA][AA]-[AA][FA]- [A2A2][FA]-[AA]-|[AA]BAG F D3D|
+  +slide+"A"[e3e3][ee] [e2e2][ce]-[ee]-|[ee]fec B2A2|"D"[FA][AA]-[AA][FA]- [A2A2][FA]-[AA]-|[AA]BAG F D3D|
 
-  EE E2 EFEC|    A,CEF A2 AB|ce-ef ecAc|1BcBG A2A2:|2BcBG A2||
+  "A"EE E2 EFEC|    A,CEF A2 AB|ce-ef ecAc|1"E"B""cBG "A"A2A2:|2"E"BcBG "A"A2||
 
-  |:AF|ECEA B-ccB|[A2A2][AA]G F-GAF|ECEA FAAB|cABc B2cd|
+  |:""AF|"A"ECEA B-ccB|"D"[A2A2][AA]G F-GAF|"A"ECEA FAAB|"E"cABc B2cd|
 
-  efed cBAG|FAAF [A3e3]e|cded cBAc|BcBG A2:|
+  "A"efed cBAG|"D"FAAF [A3e3]e|"A"cded cBAc|"E"BcBG "A"A2:|
 key: AEAE
 tags:
   - Tunes in AEAE

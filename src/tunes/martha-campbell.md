@@ -9,10 +9,10 @@ abc: |-
   M:2/2
   S:From a transcription of Buddy Thomas by Jeff Titon
   K:D
-  DEFA BFAF|DEFA BFAF|DEFA B2A2|[C2A2][B,2G2][A,4E4]|
-  DEFA BFAF|DEFA BdBd|ABde fgfe|dBAG F(D D2):|
-  |:Bcdd fdfd|efde fdfd|ABde f2d2|fedf edBd|
-  ABde fdfd|efde fdfg|abag fgfe|dBAG F(D D2):|
+  "D"""DEFA BFAF|DEFA BFAF|DEFA B2A2|"A"[C2A2][B,2G2][A,4E4]|
+  "D"DEFA BFAF|DEFA BdBd|"G"ABde fgfe|"A"dBAG "D"F(D D2):|
+  |:"D"Bcdd fdfd|efde fdfd|ABde f2d2|"A"fedf edBd|
+  "D"ABde fdfd|efde fdfg|"G"abag fgfe|"A"dBAG "D"F(D D2):|
 key: D
 tags:
   - Tunes in D

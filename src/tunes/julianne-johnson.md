@@ -13,10 +13,10 @@ abc: |-
   Z:Transcribed by Andrew Kuntz
   L:1/8
   K:D
-  fgfe dBAB|Addd d2(ef-|f)a2b a2b2|f3f f3e-|
-  fgfe dBAB|Addd d2(ef-|f)def d2B2|A3 A A4:||
-  |:Bd2e dBAd|Bd2e d2ed|Bd ded2B2|A3 A A3(A|
-  B)d2e dBAd|Bd2e d3e|fdef d2B2|A3 A A4:||
+  "D"fgfe dBAB|Addd d2(ef-|f)a2b a2b2|"A7"f3f f3e-|
+  "D"fgfe dBAB|"D"Addd ""d2(ef-|"D"f)def "G"d2B2|"D"A3 A A4:||
+  |:"G"Bd2e dBAd|"G"Bd2e ""d2ed|"G"Bd ded2B2|"D"A3 A A3(A|
+  "G"B)d2e dBAd|Bd2e d3e|"D"fdef "G"d2B2|"D"A3 A A4:||
 key: D
 tags:
   - Tunes in D

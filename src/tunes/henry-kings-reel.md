@@ -13,8 +13,8 @@ abc: |-
   K:G
   Z:Transcribed by Jan Howard
   N:With kind permission from Travis Stuart and David Bragger
-  DF|:"G" GFDC B,G,B,G, |"C" ECEG "D" FDFG |"D" A2 AG FDFG |"D" AcAF DFDF |
-  "G" GFDC B,G,B,G, |"C" ECEG "D" FDFG |"D" ABAF DFAc |"G" B2 G2 G3 F :|
+  DF|:"G" GFDC B,G,B,G, |"C" ECEG FDFG |"D" A2 AG FDFG |"D" AcAF DFDF |
+  "G" GFDC B,G,B,G, |"C" ECEG FDFG |"D" ABAF DFAc |"G" B2 G2 G3 F :|
   |:"G" G2 G2 A [B3G3] |"C" [c6G6] Bc |"D" A3 G FDFG |"D" AcAF DFDF | 
   "G" G2 G2 A [B3G3] |"C" [c6G6] BG] |"D" ABAF DFAc | "G "B2 G2 G4  :| 
 key: G

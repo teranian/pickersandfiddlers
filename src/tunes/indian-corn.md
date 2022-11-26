@@ -21,11 +21,11 @@ abc: >-
 
   zD-|:"G" DGBG BGBG |"C" DGcG cGcG |"G" DGBG BGBB |"D" cBAG FDEG |"G" DGBG BGBG 
 
-  |1 "C" DGcG cGBc |"D" d2 de dBAF |"D" GBAF "G" G2 (3GFE :|2"C" DGcG cGBc |
+  |1 "C" DGcG cGBc |"G" d2 de dBAF |"D" GBAF "G" G2 (3GFE :|2"C" DGcG""cGBc |
 
-  "D" d2 de dBAF |"D" GBAF "G" G2 AB-|:"G" BcdB G2 GF |"C" EFGE "G"D2DC |
+  "G" d2 de dBAF |"D" GBAF "G" G2 AB-|:"G" BcdB G2 GF |"C" EFGE "G"D2DC |
 
-  "G" B,CDE G2AB- |"D" BBcB A2A2 |"G" BcdB G2 GF |"C"  EFGE"G" D2 DC |
+  "G" B,CDE G2AB- |"G" BBcB "D"A2A2 |"G" BcdB G2 GF |"C"  EFGE"G" D2 DC |
 
   "G" B,CDE G2 AB- |1 "D" BBAF "G" G2 AB :|2 "D"BBAF"G " G4 ||
 key: G

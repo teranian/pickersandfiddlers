@@ -17,7 +17,7 @@ abc: |-
   (3AGF|"A"ECEF E3E|"D"FA2B A3A-|"A"ABcA AcBA|"F#m"[A,3F3]{E}[A,3F3]AF|
   "A"ECEF E3E|"D"FA2B A3(f|"E"e2)cA BcAF|"A"A4A2:|
   AB|"A"ce2f e3e|"D"fa2b a3(f|"A"e2)cB AcBA|"F#m"[F3A3][F3A3][EA]B|
-  "A"e2f e3e|"D"fa2b a3(f|"E"e2)cB AcBG|("A"A[A2A2])(A [A2A2])AB|
+  "A"c1e2f e3e|"D"fa2b a3(f|"E"e2)cB AcBG|("A"A[A2A2])(A [A2A2])AB|
   "A"ce2f e3e|"D"fa2b a3(f|"A"e2)cB AcBA|"F#m"[F3A3][F3A3]AF||
   "A"ECEF E3E|"D"FA2B A3(f|"E"e2)cA BcAF|"A"A4A2||
 key: AEAE

@@ -34,7 +34,7 @@ abc: >-
 
   "A"A2(c2 c)BcB | A3B A2(c2 | c)BcB ABAE | "D"FAFE D2 DD | 
 
-  "D"DDFD =GDFD | "A"DE2F E2 E(F | F)E F2 A3B | A8 || 
+  "D"DDFD =GDFD | "A"DE2F E2 E(F | F)E F2 A3B | A4 || 
 key: AEAE
 tags:
   - Tunes in AEAE

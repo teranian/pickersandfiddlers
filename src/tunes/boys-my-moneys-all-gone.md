@@ -13,7 +13,7 @@ abc: |-
   F: https://www.slippery-hill.com/recording/boys-my-moneys-all-gone
   Z:Transcribed by Andrew Kuntz
   K:Amix
-  [e2]-|"A"[e2] aa abaf|efab a3f|"*""E"efgf +slide+g2 gf|edc(d [e3d3])f|
+  [e2]-|"A"[e1] gaa abaf|efab a3f|"*""E"efgf +slide+g2 gf|edc(d [e3d3])f|
   "A"abaf efgf|edc(d [e3d3])(B|c)BAc B2^G2| "E"[AA]^G[AA]"A"B [A2A2]:|
   |:"A"ECEF A2A2|EFA(B cB)A2|E"G"GGA G3F|"**"E2GG- GFED|
   "A"EFAB A4-|ABcd e2ef|gfed c2A2|"E"EFAB "A"A4:|]

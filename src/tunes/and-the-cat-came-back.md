@@ -25,7 +25,7 @@ abc: >-
 
   (3DEF |\
 
-  "G"G2[B2G2] BcdB | "C"c2B2 dcBA | "G"G2G2 Bd3 | "D"cBAF DFAF |
+  "G"G2[B2G2] BcdB | "C"c2B2 dcBA | "G"G2G2 Bd3 | "D"cBAF D"G"FAF |
 
   "G"G2[B2G2] BcdB | "C"cBcd e2d2 | edef gedc | "D"BGA2 G2 :|
 

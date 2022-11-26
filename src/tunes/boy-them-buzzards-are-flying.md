@@ -24,17 +24,17 @@ abc: >-
 
   K:A
 
-  (e2 | e)eee cBAF | A2 AA FEDD | DDFD =GDFD | DE2F E2 (e2 | 
+  (e2 | "A"e)eee cBAF | A2 AA FEDD | "D"DDFD =GDFD | "A"DE2F E2 (e2 | 
 
-  e)eee cBAF | A2 AA FEDD | DDFD =GDFD | DE2F E2 E(F || 
+  "A"e)eee cBAF | A2 AA FEDD | "D"DDFD =GDFD | "A"DE2F E2 E(F || 
 
-  F)E F2 A3B | A2 (c2 c)BcB | A3B A2(c2 | c)BcB ABAE | 
+  "A"F)E F2 A3B | A2 (c2 c)BcB | A3B A2(c2 | c)BcB ABAE | 
 
-  FAFE D2 DD | DDFD =GDFD | DE2F E2 E(F | F)E F2 A3B | 
+  "D"F""AFE D2 DD | DDFD =GDFD | "A"DE2F E2 E(F | F)E F2 A3B | 
 
-  A2(c2 c)BcB | A3B A2(c2 | c)BcB ABAE | FAFE D2 DD | 
+  "A"A2(c2 c)BcB | A3B A2(c2 | c)BcB ABAE | "D"FAFE D2 DD | 
 
-  DDFD =GDFD | DE2F E2 E(F | F)E F2 A3B | A8 || 
+  "D"DDFD =GDFD | "A"DE2F E2 E(F | F)E F2 A3B | A8 || 
 key: AEAE
 tags:
   - Tunes in AEAE

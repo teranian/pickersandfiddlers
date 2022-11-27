@@ -10,10 +10,10 @@ abc: |-
   F:http://www.thursdaycontra.com/~spuds/tunes/reels/Katydid.abc
   R:Reel
   K:C
-  |:"C"{d/}e4cdcA|GAGE DCA,C|"F"G,A,CD EGAB|"F"cdeg "G7"a2g2|
-  "C"{d/}e4cdcA|GAGE DCA,C|"F"G,A,CD EGAB|"G7"dc-c2 "C"c2:|
+  |:"C"{d/}e4cdcA|GAGE DCA,C|G,A,CD EGAB|"C"cdeg "G"a2g2|
+  "C"{d/}e4cdcA|GAGE DCA,C|G,A,CD EGAB|"G"dc-c2 "C"c2:|
   |:eg|"Am"abag edeg|abag e2eg|abag egag|"C"ec-c2 c2 eg|
-  "Am"abag edeg|abag e4|"F"c'4 gagf|"G7"ec-c2 "C"c2:|
+  "Am"abag edeg|abag e4|c'4 gagf|"C"ec-c2 c2:|
 key: C
 tags:
   - Tunes in C

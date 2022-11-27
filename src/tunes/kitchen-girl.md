@@ -19,15 +19,15 @@ abc: >-
 
   K: A mix
 
-  |:"A"L[a2c2]z2"G"L[g2B2]z2|"A"efed cAcd|edef gaba|"G"g2e2e4|
+  |:"A"L[a2c2]z2"G"L[g2B2]z2|"A"efed cAcd|edef gaba|"E"g2e2e4|
 
-  "A"L[a2c2]z2"G"L[g2B2]z2|"A"efed cAcd|"A"efgd "G"efed|"A"c2A2A4 :|
+  "A"L[a2c2]z2"G"L[g2B2]z2|"A"efed cAcd|"G"efgd "E"efed|"A"c2A2A4 :|
 
   K:Ador
 
-  |:"Am"ABcA "Em"BAG2|"Am"ABAGE2(A2|A3)Bc2d2|"Em"e4e2A2 |
+  |:"A"ABcA "G"BAG2|"A"ABAGE2(A2|A3)Bc2d2|"E"e4e2A2 |
 
-  "Am"ABcA "Em"BAG2|"Am"ABAGE2AB|1"_Usual End""Am"cBAc "Em"BAGB|"Am"A4A4:|2"_Short End""Am".c2z2 "Em".B2z2|"Am"A8|]
+  "A"ABcA "G"BAG2|"A"ABAGE2AB|1"_Usual End""A"cBAc "G"BAGB|"A"A4A4:|2"_Short End""A".c2z2 "G".B2z2|"A"A8|]
 key: A
 tags:
   - Tunes in A

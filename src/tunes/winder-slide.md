@@ -17,10 +17,10 @@ abc: |-
   K: D
   de \
   | "D"f2fe f3e | f2 a4 de | fdec dc3 | "G"d3D d3B- |    
-  BdB2 A3D | "A"F2 E4 FD | DB,B,3 A,B,3 | "D"D3E D2 :|
-  AB- \
-  | BdB2 A3D | "A"F2 E4 FE | "D"DDFF DF3 | A3B A2AB-|
-  BdB2 A3D | "A"F2 E4 FE | DB,B,3 A,B,3 | "D"D2ef- fd"A"e2 | "D"d3D d4 |]
+  "G"BdB2 A3D | "A7"F2 E4 FD | DB,B,3 A,B,3 | "D"D3E D2 :|
+  ""AB- \
+  | "G"BdB2 A3D | "A7"F2 E4 FE | DDFF DF3 | "D"A3B A2AB-|
+  "G"BdB2 "D"A3D | "A7"F2 E4 FE | DB,B,3 A,B,3 | "D"D2ef- fde2 | "D"d3D d4 |]
 key: D
 tags:
   - Tunes in D

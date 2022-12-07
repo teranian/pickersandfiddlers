@@ -18,6 +18,3 @@ key: Em
 tags:
   - Tunes in Em
 ---
-https://www.youtube.com/watch?v=u6_tjcKE42A&list=PLfRXRZpfgshJU-1rDD91AP1SF13VHYqbh&index=4
-
-o﻿ther notes

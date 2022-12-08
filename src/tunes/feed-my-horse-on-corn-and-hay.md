@@ -29,21 +29,21 @@ abc: >-
 
   P:A  (first time only)
 
-  (DE|"G"G2) GG G2GD|Bd2[dg] [d2g2]((3DEF|G2) GG G2 BG|"D"A[G2B2][GB]"G" [G2B2]((3DEF|
+  (DE|"G"G2 ) GG G2GD|Bd2[dg] [d2g2]((3DEF|G2) GG G2 BG|"D"A[G2B2][GB] "G"G[G2B2]((3DEF|
 
-  G2)GG G2[GB]A|B[d2g2][dg] [d2g2][de]-|[e2e2][ee][ef] edBG|"D"A[G2B2][GB]"G"[G2B2]||
+  "G"G2)GG G2[GB]A|B[d2g2][dg] [d2g2][de]-|[e2e2][ee][ef] edBG|"D"A[G2B2]"G"[GB][G2B2]||
 
   P:B
 
-  gf|"D"e[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|"D"A[G2B2][GB]"G"[G2B2]gf|
+  gf|e"D"[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|"D"A[G2B2][GB][G2B2]gf|
 
-  "D"e[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|"D"A[G2B2][GB]"G"[G2B2]||
+  "D"e[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|A[G2B2][GB][G2B2]||
 
   P:A' (play for all repetitions)
 
-  |:[G,2D2]-|"G"[G,D]B,DG EFG[DA]|[DB][D2d2]e [D2d2][G,2D2]-|[G,D]B,DG  EFGA"D"|BGAF"G" [G,2G2][G,G]([G,E]|
+  |:[G,2D2]-|[G,D]B,DG EFG[DA]|[DB][D2d2]e [D2d2][G,2D2]-|[G,D]B,DG  EFGA|BGAF [G,2G2][G,G]([G,E]|
 
-  "G"[G,D]B,DG EF)G[DA]|[DB][D2d2][dg][d2g2][de]-|[e2e2]eg fded|"D"B[G2B2][GB]"G"[G2B2]:||
+  [G,D]B,DG EF)G[DA]|[DB][D2d2][dg][d2g2][de]-|[e2e2]eg fded|B[G2B2][GB][G2B2]:||
 key: G
 tags:
   - Tunes in G

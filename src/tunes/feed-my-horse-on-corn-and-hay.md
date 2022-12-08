@@ -37,7 +37,7 @@ abc: >-
 
   P:B
 
-  gf|e"D"[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|"D"A[G2B2][GB][G2B2]gf|
+  gf|e"D"[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|"D"A[G2B2][GB]"G"[G2B2]gf|
 
   "D"e[d2f2][df] [d2f2] eg|f[d2f2][df][d2f2]e(f|"G"g2)g2edBG|"D"A[G2B2][GB]"G"[G2B2]||
 

@@ -13,6 +13,8 @@ abc: >-
 
   L:1/8
 
+  Q: 1/2=120
+
   N:Drone low 'G' string through much of 1st strain.
 
   N:The 'A' strain is only the introduction first part, played once, followed by

@@ -1,7 +1,6 @@
 ---
 title: Cousin Sally Brown
-source: https://tunearch.org/wiki/Cousin_Sally_Brown_(1) as played by Marcus
-  Martin, modified to fit version by Rachel Eddy
+source: "https://tunearch.org/wiki/Cousin_Sally_Brown_(1) "
 date: 2022-12-14T01:04:44.940Z
 abc: >
   X:1
@@ -38,3 +37,5 @@ tags:
   - Tunes in Am
 ---
 https://www.youtube.com/watch?v=Hyawt5UvzoU
+
+Music notation from Tune Archive, as played by Marcus Martin, modified to fit version by Rachel Eddy

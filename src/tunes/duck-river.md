@@ -19,4 +19,4 @@ key: D
 tags:
   - Tunes in D
 ---
-https://www.youtube.com/watch?v=KQfPqVPR0CI
+https://www.youtube.com/watch?v=bDAqHcvzi0s

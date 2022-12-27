@@ -1,5 +1,5 @@
 ---
-title: The Blackest Crow
+title: Blackest Crow
 source: https://thesession.org/tunes/13844
 date: 2022-12-07T09:16:32.549Z
 abc: |-

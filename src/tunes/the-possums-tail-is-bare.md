@@ -1,5 +1,5 @@
 ---
-title: The possum's tail is bare
+title: Possum's tail is bare
 author: ""
 composer: Melvin Wine
 source: https://tunearch.org/wiki/Possum%27s_Tail_is_Bare_(The)

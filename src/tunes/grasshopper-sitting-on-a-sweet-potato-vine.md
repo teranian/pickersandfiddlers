@@ -22,5 +22,6 @@ key: D
 tags:
   - Tunes in D
 ---
-https://www.youtube.com/watch?v=h_QRH6pvFM4\
-Notation altered to fit Mark Wardenberg transciption.
+https://www.youtube.com/watch?v=h_QRH6pvFM4
+
+Notation altered to Mark Wardenburg transcription.

@@ -5,10 +5,10 @@ permalink: /tunes/alphabetical/
 
 <section class="mt-15">
 
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+    {# {{ collections.all | eleventyNavigation | eleventyNavigationToHTML }} #}
     
     {# <h2 class="font-bold text-3xl mb-6">A</h2> #}
-    <div class="columns-2">
+    {# <div class="columns-2">
         
         {% set tunelist = collections.tunes | sortByTitle %}
         {% for tunes in tunelist %}
@@ -25,13 +25,13 @@ permalink: /tunes/alphabetical/
             </p>
             {% endif %}
         {% endfor %}
-    </div>
+    </div> #}
 
 
 
     <p class="subtitle my-10 ">Click a tune name to view the dots.</p>
     {# {% set tunelist = collections.tunes %} #}
-    <div class="columns-2">
+    <div class="columns-1">
 
         {% for tunes in collections.tunes | sortByTitle %}
         <p class=" text-2xl text-gray-900 mb-3">

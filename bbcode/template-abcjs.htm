@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>ABC Library</title>
+	<script src="../js/abcjs-basic-min.js" type="text/javascript"></script>
+	<style type="text/css">
+		.col3 { column-count: 3 }
+		.header { 
+			position: fixed;
+			top:0;
+			left:0;
+			width: 100%;
+		}
+		.nav {
+			margin: 0px auto;
+			background-color: lightgreen;
+			width: 25%; /* need < 100% width to avoid filling the whole horizontal space */
+			text-align: center;
+		}
+		.navbutton { margin: 2px 20px; }
+		.pb { page-break-after: always; }
+		@media print{
+			body{margin:0;padding:0;border:0}
+			.nop{display:none}
+			.pb { page-break-after: always; }
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<button class="navbutton" onclick="window.location.href='#cbx';">Contents</button>
+			<button class="navbutton" onclick="window.location.href='#tbx';">Title Index</button>
+		</div>
+	</div>
+	<div style="margin-top: 50px;"><input type="file" name="inputfile" id="inputfile" accept=".abc"> </div>
+	<div class="pb" id="cbx"><h1>Contents</h1><div id="contents" class="col3"><p></p></div></div>
+	<div class="pb" id="tbx"><h1>Title Index</h1><div id="titles" class="col3"><p></p></div><div>					
+	<script type="text/javascript">
+		document.getElementById('inputfile').addEventListener('change', function() {				
+			var fr=new FileReader();
+			fr.onload=function(){
+				var t = 2, tb= new ABCJS.TuneBook(fr.result);
+				var x = document.getElementById('titles');
+				var px = x.parentNode, tz = x.lastChild; // containers for the Tune divs and title index
+				var cz = document.getElementById('contents').lastChild; // contents container
+				var tzs = []; // array for title index
+				tb.tunes.forEach(function(tx) {
+					// build Contents
+					idstr = 'X_'+tx.id; // id string for this tune
+					cz.appendChild(document.createTextNode(tx.id+'. '));
+					a = document.createElement('a'); // links to tune
+					a.innerText = tx.title;
+					a.setAttribute("href", '#'+idstr);
+					cz.appendChild(a)
+					cz.appendChild(document.createElement('br'));
+					lines = tx.abc.split('\n') // should stop after K: line
+					// get all the titles in the tune
+					titles = lines.filter(function(x){return x.startsWith('T:')}).map(function(x){return x.slice(2).trim()});
+					// collect multiple titles for title index - should also find key
+					tzs = tzs.concat(titles.map(function(x){ return {'id': tx.id, 'title': x}}));
+
+					// create a <div> element for this tune
+					n = document.createElement("div");
+					n.setAttribute("id", idstr);
+					px.append(n); // insert the <div=idstr> node
+					ABCJS.renderAbc(idstr, tx.abc); // render the tune
+				});
+
+				// sort titles - should also order by .id as secondary key
+				tzs.sort(function(x,y){ return (x.title<y.title)?-1:1 });
+
+				// fill in the Title Index
+				tzs.forEach(function(tx){
+					tz.appendChild(document.createTextNode(tx.id+'. '));
+					a = document.createElement('a');
+					a.innerText = tx.title;
+					a.setAttribute("href", '#X_'+tx.id);
+					tz.appendChild(a)
+					tz.appendChild(document.createElement('br'));
+				});
+			}						
+			fr.readAsText(this.files[0]);
+		});
+	</script>
+</body>	  
+</html>

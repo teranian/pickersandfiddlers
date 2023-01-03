@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<!-- Load ABC Library into a webpage and build contents & title index.
+     Bob Buckley 26/8/2022
+-->
+<head>
+	<title>ABC Library</title>
+	<script src="http://moinejf.free.fr/js/abcweb-1.js"></script>
+	<script src="http://moinejf.free.fr/js/snd-1.js"></script>
+	<script src="http://moinejf.free.fr/js/follow-1.js"></script>
+	<!--script src="../js/abcweb-1.js"></script-->
+	<!--script src="../js/snd-1.js"></script-->
+	<style type="text/css">
+		/* body { max-width: 21cm; } */
+		.col3 { column-count: 3 }
+		.header { 
+			position: fixed;
+			top:0;
+			left:0;
+			width: 100%;
+			max-width: 21cm;
+		}
+		.nav {
+			margin: 0px auto;
+			background-color: lightgreen;
+			width: 25%; /* need < 100% width to avoid filling the whole horizontal space */
+			text-align: center;
+			min-width: 8cm;
+		}
+		.navbutton { margin: 2px 20px; }
+		.pb { page-break-after: always; }
+		#contents>p, #titles>p {margin-block-start: 0;}
+		@media print{
+			body{margin:0;padding:0;border:0}
+			.nop{display:none}
+			.pb { page-break-after: always; }
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<button class="navbutton" onclick="window.location.href='#cbx';">Contents</button>
+			<button class="navbutton" onclick="window.location.href='#tbx';">Title Index</button>
+		</div>
+	</div>
+	<div style="margin-top: 50px;">
+		<input type="file" name="inputfile" id="inputfile" accept=".abc">
+		<p>
+		<input type="radio" name="dotfmt" onclick="docfix = ''" checked />dots<br>
+		<input type="radio" name="dotfmt" onclick="docfix = 'V:1\n%%grid2 1\n'" />charts<br>
+		<input type="radio" name="dotfmt" onclick="docfix = '%%grid -8 music\n'" />jazz chart<br>
+		<input type="radio" name="dotfmt" onclick="docfix = '%%grid -8 nomusic\n'" />jazz chart (no dots)
+		</p>
+	</div>
+	<div class="pb" id="cbx"><h1 class="idxh">Contents</h1><div id="contents" class="col3"><p style="margin-block-start: 0;"></p></div></div>
+	<div class="pb" id="tbx"><h1 class="idxh">Title Index</h1><p id="letterp"></p><div id="titles" class="col3"></div></div>	
+	<!-- following has lots of settings - these don't seem to change properly
+	if I don't do it this way! I'm not sure why that is. -->
+	<div id="abc2svg"><script class="abc" type="text/vnd.abc">%abc-2.2
+%%font Georgia
+%%leftmargin 0.5cm
+%%rightmargin 0.5cm
+%%staffwidth 20cm
+%%titlefont Georgia-Bold 14
+%%subtitlefont Georgia-Italic 12
+%%partsfont Georgia 12
+%%tempofont Georgia 12
+%%gchordfont Georgia 16
+%%infofont Georgia
+%%textfont Courier
+%%setfont-1 Georgia 12
+%%setfont-2 Georgia-Italic 12
+%%setfont-3 Courier 12
+%%setfont-4 Georgia-Bold 12
+%%vocalfont Georgia 12
+%%wordsfont Georgia 12
+%%composerfont Georgia 11
+%%annotationsfont Courier 11
+%%writefields XH
+%%writefields P no
+%%historyfont Georgia-Italic 11
+%%MIDI gchordon
+% 41 violin 42 viola 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
+%%MIDI program 41
+</script></div>				
+	<script type="text/javascript">
+		var docfix = '';
+		var fr=new FileReader(), mdiv = document.getElementById("abc2svg");
+		fr.onerror = function() {
+          alert(fileReader.error);
+        }; 
+		document.getElementById('inputfile').addEventListener('change', function() {				
+			
+			fr.onload=function(){
+				var abcs = fr.result.replace('\r', ''), ndiv, pos;
+				var cidxp = document.getElementById("contents").lastChild; // should be empty <p>
+				var tidx = document.getElementById("titles"), tidxc = document.getElementById("letterp"); // should be empty <p>
+				// console.log("abcs = '" + abcs.slice(0, 1000).replace(/%%/g, '%%%')) + "'---"; // console.log does string substitutions
+				var ixs = [0], tixs = [];
+				// find all the starts of tunes
+				var pat = /^X:/gm;
+				while (pos=pat.exec(abcs)) { ixs.push(pos.index); }
+				// console.log(""+ixs.length+" tunes found.")
+				//console.log("X: indices = " + ixs.toString());
+				const ntunes = ixs.length;
+				ixs.push(abcs.length);
+				abc2svg.music[0].t = abcs.slice(0, ixs[1]).trim()+"\n\n"; //.set_music seems to not work
+				// insert the new music, and build the Contents
+				for(var i=1; i<ntunes; i++) {
+					while(abc2svg.music.length <= i) {
+						ndiv = document.createElement("div");	// new <div> for this tune
+						mdiv.appendChild(ndiv);					// insert <div>
+						abc2svg.music.push({n:'mus'+abc2svg.music.length,t:'',d:ndiv}); // add new nodes when needed
+					}
+					ndiv = abc2svg.music[i].d;
+					var txt = abcs.slice(ixs[i], ixs[i+1]).trim()+"\n\n";	// get the ABC for the tune
+					if (docfix.length) { // insert docfix string after K: line
+						keyend = txt.indexOf('\n', /^K:/gm.exec(txt))+1;
+						txt = txt.slice(0, keyend)+docfix+txt.slice(keyend);
+					}
+					abc2svg.set_music(ndiv, txt);
+					// set the tune in the music
+					var xno = txt.slice(2, txt.indexOf('\n')).trim(), tid = 'X'+xno;	// get the tune tid from the X: line (first line)
+					ndiv.setAttribute("id", tid);			// set the id attribute for the tune's <div> - not for 0th
+					if (/^%%\s*newpage\s+/mi.test(txt)) {	// fix new pages
+						ndiv.setAttribute("class", "pb");
+					}
+					// create Title Index entries ...
+					var cixs = [], cpos = tixs.length; 
+					var tpat = /^T:/gm;
+					while (pos = tpat.exec(txt)) {
+						tpos = pos.index; 
+						cixs.push(tpos);
+						// may need to fix leading 'The ', 'A ' or 'An '
+						tixs.push({xno: xno, tl: txt.slice(tpos+2, txt.indexOf('\n', tpos+2)).trim()});
+					}
+					// create Contents entry
+					var tl = tixs[cpos].tl;
+					// var tl = txt.slice(cixs[0]+2, txt.indexOf('\n', cixs[0])).trim();
+					console.log("add title - "+tl);
+					cidxp.appendChild(document.createTextNode(xno+'. '));
+					var a = document.createElement('a');
+					a.setAttribute("href", '#'+tid);
+					a.innerText = tl;
+					cidxp.appendChild(a);
+					cidxp.appendChild(document.createElement('br'));
+				}
+				// output title index from tixs at this point
+				// sort titles for title index
+				tixs.sort(function(a,b){ return a.tl.localeCompare(b.tl); });
+				// insert titles into title index
+				var lastch = '', nextch, tidxp = null;
+				tixs.forEach(function(t) {
+					// manage the letter index
+					nextch = t.tl.slice(0,1);
+					if (nextch.localeCompare(lastch)) { // new H3 and letter link for each new letter
+						tidx.appendChild(document.createElement('h3'));
+						tidx.lastChild.innerText = nextch;
+						tidx.lastChild.setAttribute("id", "TX"+nextch);
+						tidx.appendChild(document.createElement('p')); // new <p> for titles
+						tidxp = tidx.lastChild;
+						// add letter to letter list, with link
+						a = document.createElement('a');
+						a.setAttribute('href', '#TX'+nextch);
+						a.innerText = nextch;
+						tidxc.appendChild(a);
+						tidxc.appendChild(document.createTextNode('  '));
+						lastch = nextch;
+					}
+					// now add the title to the Title Index
+					tidxp.appendChild(document.createTextNode(t.xno+'. '));
+					var a = document.createElement('a');
+					a.setAttribute("href", '#X'+t.xno);
+					a.innerText = t.tl;
+					tidxp.appendChild(a);
+					tidxp.appendChild(document.createElement('br')); // and a <br/>
+				});
+				return;
+			};
+			fr.readAsText(this.files[0]);
+		});
+	</script>
+</body>	  
+</html>

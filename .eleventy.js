@@ -3,6 +3,8 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -73,7 +75,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('sortByTitle', values => {
     return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title))
   })
-  
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);  
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk

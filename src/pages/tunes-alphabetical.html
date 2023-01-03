@@ -4,23 +4,51 @@ permalink: /tunes/alphabetical/
 ---
 
 <section class="mt-15">
-    <p class="subtitle my-10 ">Click a tune name to view the dots.</p>
-    {# {% set tunelist = collections.tunes %} #}
+
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+    
+    {# <h2 class="font-bold text-3xl mb-6">A</h2> #}
     <div class="columns-2">
-
-        {% for tunes in collections.tunes | sortByTitle %}
-
+        
+        {% set tunelist = collections.tunes | sortByTitle %}
+        {% for tunes in tunelist %}
+            {% if tunes.data.title.charAt[0] === "A" %}
             <p class=" text-2xl text-gray-900 mb-3">
                 <a href="{{ tunes.url | url }}">
                     {% if tunes.data.title %}
                         {{ tunes.data.title }}
                     {% else %}
-                            Untitled
-                        {% endif %}
+                        Untitled
+                    {% endif %}
                     <span>({{ tunes.data.key }})</span>
                 </a>
             </p>
-
+            {% endif %}
         {% endfor %}
     </div>
-</section> 
+
+
+
+    <p class="subtitle my-10 ">Click a tune name to view the dots.</p>
+    {# {% set tunelist = collections.tunes %} #}
+    <div class="columns-2">
+
+        {% for tunes in collections.tunes | sortByTitle %}
+        <p class=" text-2xl text-gray-900 mb-3">
+            <a href="{{ tunes.url | url }}">
+                {% if tunes.data.title %}
+                    {{ tunes.data.title }}
+                {% else %}
+                    Untitled
+                {% endif %}
+                <span>({{ tunes.data.key }})</span>
+            </a>
+        </p>
+        {% endfor %}
+    </div>
+
+
+
+
+
+</section>

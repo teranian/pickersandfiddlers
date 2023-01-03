@@ -11,6 +11,7 @@ abc: |-
   R:Old Time
   M:4/4
   L:1/8
+  Q:1/2=120
   K:D
   dB|:"D"A2B2 d3 A|B2 d4 dB|A2 B2 dB A2 |"G"B6 dB|
     |"D"A2B2 d3 e|f2e2 d3 e |"D"f2e2 "G"d2B2|1 "D"A6 dB:|2 "D"A6 fg ||

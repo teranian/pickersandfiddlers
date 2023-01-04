@@ -5,154 +5,30 @@ permalink: /tunes/bykey/
 
 <section class="mt-15">
     <p class="subtitle my-10 ">Click a tune name to view the dots.</p>
-    <h2 class="font-bold text-3xl mb-6">Tunes in A</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "A" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
 
-        <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in Am</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "Am" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
-    
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in AEAC#</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "AEAC#" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
+    <p>Click a letter to jump to those tunes</p>
+    <ul class=" "></ul>
+    {%- for group in ( collections.tunesByKey )%}
+        <li class="font-bold text-3xl mr-1 list-none inline">
+            <a  href="#group-{{ group }}">{{ group }}</a>
+        </li>
+    {%- endfor %}
+    </ul>
 
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in AEAE</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "AEAE" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
+    {%- for group in ( collections.tunesByKey )%}
+    <div class="mt-6">
+        <h2 class="font-bold text-3xl" id="group-{{ group }}">{{ group }}</h2>
+        <ul>
+        {%- for tune in ( collections.tunes | sortByTitle ) %}
+            {% if tune.data.key == group %}
+                <li class="text-2xl">
+                    <a href="{{ tune.url }}">{{ tune.data.title }} <span>({{ tune.data.key }})</span></a>
+                </li>
             {% endif %}
-        {% endfor %}
+        {%- endfor %}
+        </ul>
     </div>
+    {%- endfor %}
 
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in B</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "B" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
 
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in C</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "C" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in D</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "D" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in DDAD</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "DDAD" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in Em</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "Em" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <h2 class="font-bold text-3xl mb-6 mt-12">Tunes in G</h2>
-    <div class="columns-2">
-        {% set tunelist = collections.tunes | sortByTitle %}
-        {% for tunes in tunelist %}
-            {% if tunes.data.key == "G" %}
-                <p class=" text-2xl text-gray-900 mb-3">
-                    <a href="{{ tunes.url | url }}">
-                        {{ tunes.data.title }}
-                        <span>({{ tunes.data.key }})</span>
-                    </a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    </div>
 </section>

@@ -7,7 +7,7 @@ abc: |-
   T:All The Good Times
   M:3/4
   L:1/4
-  Q: 180
+  Q:1/2=120
   K:G
    "D"B3/2 A/2 B| "D7"G2 A| "G"G- F E| "D"D3|
    "D"B3/2 A/2 B| G2 E| "A7"F- A2-| A2 z|

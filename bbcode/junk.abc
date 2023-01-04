@@ -1,4 +1,4 @@
-%abc-2.1
+%abc-2.2
 %%font Georgia
 %%leftmargin .5cm
 %%rightmargin .5cm
@@ -19,11 +19,11 @@
 %%wordsfont Georgia 12
 %%composerfont Georgia 11
 %%annotationsfont Courier 11
-%%writefields XH
+%%writefields XH yes
 %%writefields P no
 %%historyfont Georgia-Italic 11
 %%MIDI gchordon
-% 41 violin. 42 violoa 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
+% 41 violin 42 viola 69 oboe 73 picolo 74 flute 75 recorde 76 pan flute 79 whistle 106 banjo
 %%MIDI program 41
 
 X:1
@@ -34,6 +34,8 @@ L:1/8
 Q:1/4=220
 Z: Bob Buckley's adaptation, first learned from Brad Tate
 K:C
+V:1
+%%grid2 1
 G2A2B2 | "C"cBcg- gage|agec- cdcA|"F"FGAc- cdcA|dcAF- FGA2| \
    "G"BdBG- GGAG|BdBG- GGAG|"C"cBca- age2|1g2 :|2 c2 ||
 |:z2g2^g2|"A"agea- age2|agea- age2|"D7"dcAd- dcA2|dcAd- dcA2 |1 \
@@ -43,6 +45,7 @@ BdBG- GGAG| "C"cBca- age2| c2 :|2 \
 
 X:2
 T:Margaret's Waltz
+%%grid -8 music
 C:Pat Shaw
 R:waltz
 M:3/4
@@ -62,11 +65,11 @@ M: 3/4
 L: 1/8
 K: Dmaj
 DE |"D"Fz F2 FE | Fz F2 FE|F A3 AB|AF ED DE | \
-F2 "G"d3 B |"D" AF D2DE |"A" F2 AF EF |1"D" D4 :|2"D" D4 (3ABc||
-|:"D"d2dc de|dc BA Bc|d3 B AF|D4 d2|\
+F2 "G"d3 B |"D" AF D2DE |"A" F2 AF EF |"D" D4 :|
+(3ABc| "D"d2dc de|dc BA Bc|d3 B AF|D4 d2|\
 "Em"e4 ef|"Em7" e2 d2 e2|"Bm"f3e fe|"F#m7"dc BA Bc|
 "G"d3 c de|"G6" dc BA Bc |"D" d3 B AF |D4 DE |\
-"D"F2 d2 "G"B2 |"D" A3 F DE |"A" F2 AF EF |"D" D6|]
+"D"F2 d2 "G"B2 |"D" A3 F DE |"A" F2 AF EF |"D" D4|]
 %%newpage
 
 X: 4
@@ -87,6 +90,7 @@ E|"A"AA/A/ A2|"A"cB A2|"A"AA/A/ AA|"G"=G3 E|"A"AA/A/ A2|"A"cB A2|\
 X: 5
 T: Arkansas Traveler, The
 C: Trad.
+O:USA
 S: http://thesession.org/tunes/5583
 R: reel
 M: 4/4
@@ -101,7 +105,6 @@ fg| "D"agfa "Em"gfeg | "D"fedf "A"edce | "D"dcdf "A7"edeg |"D"fedf "A7"e2fg | \
 X: 6
 T:Turkey in the Straw, The
 %%transpose -7
-C: Trad.
 R:Reel
 C:Trad.
 O:USA
@@ -141,7 +144,7 @@ L: 1/16
 Q:1/4=120
 K: G
 E2F2 \
-|"G"G2>A2 GED2 | G6-A2 | "Em"B2>c2 BAG2 | E6 B2 \
+|"G"G2>A2 GED2 | G6 A2 | "Em"B2>c2 BAG2 | E6 B2 \
 | "C"cBcd e2dc | "G"BABc d2cB \
 |1 "A"A2B2 "A7"A2G2 | "D7"A2D2 \
 :|2 "A7"A2B2 "D7"dBA2 | "G"G4 ||

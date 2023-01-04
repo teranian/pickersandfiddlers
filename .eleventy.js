@@ -74,7 +74,22 @@ module.exports = function (eleventyConfig) {
   // this sorts a Collection descending by Title A > Z
   eleventyConfig.addFilter('sortByTitle', values => {
     return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title))
-  })
+  });
+
+  // filters a Collection for unique results
+  eleventyConfig.addFilter('sortByUniqueTitle', allValues => {
+    // to lowercase
+    allValues = allValues.map((item) => item.toLowerCase());
+    // remove duplicates
+    allValues = [...new Set(allValues)];
+    // order alphabetically
+    allValues = allValues.sort(function (a, b) {
+     return a.localeCompare(b, "en", { sensitivity: "base" });
+    });
+    // return
+    return allValues;
+
+  });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);  
 

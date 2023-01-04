@@ -2,7 +2,7 @@ module.exports = {
   eleventyComputed: {
     eleventyNavigation: {
       key: data => data.title,
-      parent: data => data.title.startsWith[0]
+      parent: data => data.title.charAt(0)
     }
   },
   layout: "tune",

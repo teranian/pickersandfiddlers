@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);  
+
   // A plugin to automatically convert any youtube link found in markdown files into an embed iframe
   eleventyConfig.addPlugin(embedYouTube, {
     embedClass: 'my-alternate-classname',
@@ -77,7 +79,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // filters a Collection for unique results
-  eleventyConfig.addFilter('sortByUniqueTitle', allValues => {
+  eleventyConfig.addFilter('sortByUnique', allValues => {
     // to lowercase
     allValues = allValues.map((item) => item.toLowerCase());
     // remove duplicates
@@ -90,8 +92,6 @@ module.exports = function (eleventyConfig) {
     return allValues;
 
   });
-
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);  
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk

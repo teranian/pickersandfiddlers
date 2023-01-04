@@ -4,7 +4,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
+const _ = require("lodash");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -78,20 +78,22 @@ module.exports = function (eleventyConfig) {
     return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title))
   });
 
-  // filters a Collection for unique results
-  eleventyConfig.addFilter('sortByUnique', allValues => {
-    // to lowercase
-    allValues = allValues.map((item) => item.toLowerCase());
-    // remove duplicates
-    allValues = [...new Set(allValues)];
-    // order alphabetically
-    allValues = allValues.sort(function (a, b) {
-     return a.localeCompare(b, "en", { sensitivity: "base" });
-    });
-    // return
-    return allValues;
 
+  eleventyConfig.addCollection("alphabetGroups", function(collectionApi) {
+    // get unsorted items.
+    let array = collectionApi.getAll();
+    array =  array.map(a => a.data.parent);
+    return [...new Set(array.sort())];
   });
+
+  
+  eleventyConfig.addCollection("tunesByKey", function(collectionApi) {
+    // get unsorted items.
+    let array = collectionApi.getAllSorted();
+    array =  array.map(a => a.data.key)
+    return [...new Set(array.sort())];
+  });
+
 
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk

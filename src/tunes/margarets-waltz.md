@@ -1,6 +1,6 @@
 ---
 title: Margaret's waltz
-composer: Pat Shaw
+composer: ""
 source: https://abcnotation.com/tunePage?a=thesession.org/tunes/1678.no-ext/0002
 date: 2023-01-11T00:25:53.109Z
 abc: |-
@@ -21,3 +21,5 @@ tags:
   - Tunes in A
 ---
 https://www.youtube.com/watch?v=8BOx-6vFDVw
+
+Pat Shaw

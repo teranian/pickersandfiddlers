@@ -8,10 +8,10 @@ permalink: /tunes/alphabetical/
 <section class="mt-15">
 
     <p class="my-10 ">Click a tune name to view the dots.</p>
-
+    <p class="my-10 "></p>
     
-    <p>Click a letter to jump to those tunes</p>
-    <ul class=" "></ul>
+    <label for="quick-links">Quick Links</label>
+    <ul class=" " id="quick-links">
     {%- for group in ( collections.alphabetGroups )%}
         <li class="font-bold text-3xl mr-0.5 list-none inline">
             <a  href="#group-{{ group }}">{{ group }}</a>

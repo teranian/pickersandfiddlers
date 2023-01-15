@@ -20,4 +20,4 @@ tags:
 ---
 https://www.youtube.com/watch?v=wsce2qH-QJo
 
-COTPAF starts on the B part in the music notation, as played by Clare and Walt on youtube - copy the URL into youtube to view.
+COTPAF starts on the B part in the music notation, as played by Clare and Walt on youtube.

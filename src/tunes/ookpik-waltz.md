@@ -1,5 +1,6 @@
 ---
 title: Ookpik waltz
+composer: Frankie Rodgers
 source: https://abcnotation.com/tunePage?a=trillian.mit.edu/~jc/music/session/FiddleHell/waltz/Waltz_Jam_2018/0026
 date: 2023-01-16T06:25:13.402Z
 abc: |-

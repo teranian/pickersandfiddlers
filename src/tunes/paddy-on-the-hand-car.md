@@ -36,6 +36,4 @@ key: G
 tags:
   - Tunes in G
 ---
-This is the version played by COTPAF:
-
-https://www.slippery-hill.com/content/paddy-hand-car
+https://www.youtube.com/watch?v=pbiBFyVo__A

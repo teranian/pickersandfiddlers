@@ -1,6 +1,7 @@
 ---
 title: Red prairie dawn
 composer: Garry Harrison
+source: https://abcnotation.com/tunePage?a=thesession.org/tunes/19378.no-ext/0001
 date: 2023-01-20T06:07:43.953Z
 abc: |-
   X:1
@@ -19,4 +20,4 @@ tags:
 ---
 https://www.youtube.com/watch?v=xF90s_DehPQ
 
-Mostly played in A but COTPAF plays it in G and slower than GH plays it in the youtube clip. Obviously he was a morning person.
+Mostly played in A but COTPAF plays it in G (notation modified) and slower than GH plays it in the youtube clip. Obviously he was a morning person.

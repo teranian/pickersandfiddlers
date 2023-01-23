@@ -28,17 +28,16 @@ prism: true
         
         {% if abc %}
 
-            <div id="paper" class="my-2"></div>
-            <hr>
-            <div id="audio"></div>
-            <hr>
-            <div class=" mt-10">
-                <label for="ABCMusic" class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-400 text-center">ABC notation
-            string:</label>
-                <textarea name="ABCMusic" id="abc" spellcheck="false" height="auto"
-            class="block w-full h-80 p-2.5 mx-auto w-3xl m text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">{{ abc }}</textarea>
-                {# <div id="warnings" class="my-2 text-center"></div> #}
-            </div>
+        <div id="paper" class="my-2 mb-10"></div>
+        <div id="audio" class="my-2"></div>
+        <hr>
+        <div class=" mt-10">
+            <label for="ABCdots" class="block mb-2 text-lg font-medium text-gray-900 dark:text-gray-400 text-center">ABC notation
+        string:</label>
+            <textarea name="ABCdots" id="abc" spellcheck="false" height:"auto"
+        class="block w-full h-96 p-2.5 mx-auto w-3xl m text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">%%gchordfont "itim-music,Itim" 20 {{ abc }}</textarea>
+        {# <div id="warnings" class="my-2 text-center"></div> #}
+        </div>
         {% endif %}
 
 

@@ -17,6 +17,8 @@ abc: >-
 
   D:
 
+  F: https://www.slippery-hill.com/recording/say-old-man-can-i-have-your-daughter
+
   Z:Transcribed by Andrew Kuntz
 
   K:D
@@ -40,4 +42,6 @@ key: DDAD
 tags:
   - Tunes in DDAD
 ---
-https://www.slippery-hill.com/content/say-old-man-can-i-have-your-daughter
+https://www.youtube.com/watch?v=ipKQBhqdHg4
+
+Best version is the Canote Bros on https://www.slippery-hill.com/recording/say-old-man-can-i-have-your-daughter

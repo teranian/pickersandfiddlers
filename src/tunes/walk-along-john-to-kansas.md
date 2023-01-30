@@ -18,3 +18,5 @@ tags:
   - Tunes in AEAE
 ---
 https://www.youtube.com/watch?v=yUaITM8O3L4
+
+COTPAF start on the B part in the music notation and as played by Molsky and co.

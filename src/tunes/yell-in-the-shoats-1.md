@@ -21,3 +21,5 @@ tags:
   - Tunes in DDAD
 ---
 https://www.youtube.com/watch?v=xQB7RBlDoHI
+
+First tune in a medley with Piney Ridge

@@ -22,7 +22,7 @@ abc: >-
 
   Q:260
 
-  R:Country Rag
+  R:Country Rag (chords are capoed at 3rd fret)
 
   D:Rounder CD 1131/1132, Ed Haley - "Forked Deer" (1997).  
 

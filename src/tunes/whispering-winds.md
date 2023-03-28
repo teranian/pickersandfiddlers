@@ -13,7 +13,7 @@ abc: >-
 
   L:1/8
 
-  N:DDad tuning (fiddle)
+  N:DDAE tuning (fiddle)
 
   N:The ties in the transcription to be played as slides. 
 
@@ -36,6 +36,6 @@ abc: >-
   [A6f6][A2f2]-|[Af]ebf af d2|J[A3f3](a [A2f2])((3fga|b)faf d4||
 key: D
 tags:
-  - Tunes in DDAD
+  - Tunes in D
 ---
 https://youtu.be/3ISbC1B_cVg

@@ -1,7 +1,6 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const htmlmin = require("html-minifier");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const _ = require("lodash");
@@ -104,21 +103,6 @@ module.exports = function (eleventyConfig) {
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
-  // Minify HTML
-  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-  //   // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-  //   if (outputPath.endsWith(".html")) {
-  //     let minified = htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true,
-  //     });
-  //     return minified;
-  //   }
-
-  //   return content;
-  // });
-
   // this sorts a Collection descending by Title A > Z
   eleventyConfig.addFilter('sortByTitle', values => {
     return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title))
@@ -137,8 +121,6 @@ module.exports = function (eleventyConfig) {
     array =  array.map(a => a.data.key)
     return [...new Set(array.sort())];
   });
-
-
 
   return {
     dir: {

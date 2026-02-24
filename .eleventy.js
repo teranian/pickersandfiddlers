@@ -8,6 +8,52 @@ const _ = require("lodash");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
+  eleventyConfig.setServerOptions({
+		// Default values are shown:
+
+		// Whether the live reload snippet is used
+		liveReload: true,
+
+		// Whether DOM diffing updates are applied where possible instead of page reloads
+		domDiff: true,
+
+		// The starting port number
+		// Will increment up to (configurable) 10 times if a port is already in use.
+		port: 8080,
+
+		// Additional files to watch that will trigger server updates
+		// Accepts an Array of file paths or globs (passed to `chokidar.watch`).
+		// Works great with a separate bundler writing files to your output folder.
+		// e.g. `watch: ["_site/**/*.css"]`
+		watch: [],
+
+		// Show local network IP addresses for device testing
+		showAllHosts: false,
+
+		// Use a local key/certificate to opt-in to local HTTP/2 with https
+		https: {
+			// key: "./localhost.key",
+			// cert: "./localhost.cert",
+		},
+
+		// Change the default file encoding for reading/serving files
+		encoding: "utf-8",
+
+		// Show the dev server version number on the command line
+		showVersion: false,
+
+		// Added in Dev Server 2.0+
+		// The default file name to show when a directory is requested.
+		indexFileName: "index.html",
+
+		// Added in Dev Server 2.0+
+		// An object mapping a URLPattern pathname to a callback function
+		// for on-request processing (read more below).
+		onRequest: {},
+	});
+
+  eleventyConfig.amendLibrary("md", mdLib => mdLib.enable("code"));
+
   eleventyConfig.setUseGitIgnore(false);
 
   // Merge data instead of overriding
@@ -23,7 +69,7 @@ module.exports = function (eleventyConfig) {
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);  
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // A plugin to automatically convert any youtube link found in markdown files into an embed iframe
   eleventyConfig.addPlugin(embedYouTube, {
@@ -47,10 +93,10 @@ module.exports = function (eleventyConfig) {
     "./src/static/js/abcscripts.js": "./static/js/abcscripts.js",
   });
 
-   // Copy Image Folder to /_site
-   eleventyConfig.addPassthroughCopy({
-    "./src/static/css/": "./static/css/"});
-
+  // Copy Image Folder to /_site
+  eleventyConfig.addPassthroughCopy({
+    "./src/static/css/": "./static/css/"
+  });
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
@@ -78,7 +124,6 @@ module.exports = function (eleventyConfig) {
     return values.slice().sort((a, b) => a.data.title.localeCompare(b.data.title))
   });
 
-
   eleventyConfig.addCollection("alphabetGroups", function(collectionApi) {
     // get unsorted items.
     let array = collectionApi.getAll();
@@ -86,7 +131,6 @@ module.exports = function (eleventyConfig) {
     return [...new Set(array.sort())];
   });
 
-  
   eleventyConfig.addCollection("tunesByKey", function(collectionApi) {
     // get unsorted items.
     let array = collectionApi.getAllSorted();
@@ -95,8 +139,7 @@ module.exports = function (eleventyConfig) {
   });
 
 
-  // Let Eleventy transform HTML files as nunjucks
-  // So that we can use .html instead of .njk
+
   return {
     dir: {
       input: "src",
@@ -104,4 +147,3 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 };
-
